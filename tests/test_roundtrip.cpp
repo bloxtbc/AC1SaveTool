@@ -62,90 +62,54 @@ int main()
         const fs::path input = "testSave.sav";
         const fs::path output = "testSave_roundtrip.sav";
 
-        std::cout << "Reading: " << input << '\n';
+        printf("AC1 Save Tool - Round-Trip Test\n");
+        printf("Input:  \"%s\"\n", input.string().c_str());
+        printf("Reading: %s\n", input.string().c_str());
 
         auto original = readFile(input);
 
-        std::cout
-            << "Original size: "
-            << original.size()
-            << " bytes\n";
+        printf("Original size: %zu bytes\n", original.size());
 
         ac1::SaveReader reader;
 
         auto save = reader.read(original);
 
-        std::cout
-            << "Magic: 0x"
-            << std::hex
-            << save.magic
-            << std::dec
-            << '\n';
+        printf("Magic: 0x%x\n", save.magic);
 
-        std::cout
-            << "Version: "
-            << save.version
-            << '\n';
+        printf("Version: %d\n", save.version);
 
-        std::cout
-            << "Objects: "
-            << save.objectCount
-            << '\n';
-
+        printf("Objects: %d\n", save.objectCount);
 
         ac1::SaveWriter writer;
 
         auto rebuilt = writer.write(save);
 
-        std::cout
-            << "Rebuilt size: "
-            << rebuilt.size()
-            << " bytes\n";
+        printf("Rebuilt size: %zu bytes\n", rebuilt.size());
 
         writeFile(output, rebuilt);
 
         if (original.size() != rebuilt.size()) {
-            std::cerr
-                << "FAIL: File sizes differ!\n";
+            printf("FAIL: File sizes differ!\n");
 
             return 1;
         }
 
         for (std::size_t i = 0; i < original.size(); ++i) {
             if (original[i] != rebuilt[i]) {
-                std::cerr
-                    << "FAIL: Files differ at offset 0x"
-                    << std::hex
-                    << i
-                    << std::dec
-                    << '\n';
-
-                std::cerr
-                    << "Original: 0x"
-                    << std::hex
-                    << std::to_integer<unsigned>(original[i])
-                    << '\n';
-
-                std::cerr
-                    << "Rebuilt:  0x"
-                    << std::hex
-                    << std::to_integer<unsigned>(rebuilt[i])
-                    << '\n';
+                printf("FAIL: Files differ at offset 0x%zx\n", i);
+                printf("Original: 0x%x\n", std::to_integer<unsigned>(original[i]));
+                printf("Rebuilt:  0x%x\n", std::to_integer<unsigned>(rebuilt[i]));
 
                 return 1;
             }
         }
 
-        std::cout
-            << "PASS: Round-trip is byte-identical!\n";
+        printf("PASS: Round-trip is byte-identical!\n");
 
         return 0;
     }
     catch (const std::exception& e) {
-        std::cerr
-            << "ERROR: "
-            << e.what()
-            << '\n';
+        printf("ERROR: %s\n", e.what());
 
         return 1;
     }

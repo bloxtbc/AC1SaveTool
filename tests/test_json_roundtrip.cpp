@@ -145,20 +145,18 @@ int main()
         const fs::path jsonPath = "testSave.json";
         const fs::path outputPath = "testSave_roundtrip.sav";
 
-        std::cout << "JSON round-trip test\n\n";
+        printf("AC1 Save Tool - JSON Round-Trip Test\n");
 
         // --------------------------------------------------
         // Read original save
         // --------------------------------------------------
 
-        std::cout
-            << "Reading\n"
-            << "  Input:  \"" << inputPath.string() << "\"\n";
+        printf("Reading\n");
+        printf("  Input:  \"%s\"\n", inputPath.string().c_str());
 
         const auto original = readFile(inputPath);
 
-        std::cout
-            << "  Size:   " << original.size() << " bytes\n";
+        printf("  Size:   %zu bytes\n", original.size());
 
         // --------------------------------------------------
         // Binary → SaveGame
@@ -169,21 +167,16 @@ int main()
         const auto save =
             reader.read(original);
 
-        std::cout
-            << "  Magic:  0x"
-            << std::hex
-            << std::uppercase
-            << save.magic
-            << std::dec
-            << "\n"
-            << "  Version: " << save.version << "\n"
-            << "  Objects: " << save.objectCount << "\n\n";
+        printf("  Magic:  0x%x\n", save.magic);
+        printf("  Version: %d\n", save.version);
+        printf("  Objects: %d\n", save.objectCount);
+        printf("\n");
 
         // --------------------------------------------------
         // SaveGame → JSON
         // --------------------------------------------------
 
-        std::cout << "Exporting JSON\n";
+        printf("Exporting JSON\n");
 
         ac1::HashDatabase hashes;
         hashes.load("hashes.json");
@@ -203,34 +196,29 @@ int main()
             )
         );
 
-        std::cout
-            << "  JSON:    " << json.size() << " bytes\n"
-            << "  Output:  \"" << jsonPath.string() << "\"\n\n";
+        printf("  JSON:    %zu bytes\n", json.size());
+        printf("  Output:  \"%s\"\n\n", jsonPath.string().c_str());
 
         // --------------------------------------------------
         // JSON → SaveGame
         // --------------------------------------------------
 
-        std::cout << "Importing JSON\n";
+        printf("Importing JSON\n");
 
         const auto imported =
             ac1::SaveJsonImporter::importSave(json);
 
-        std::cout
-            << "  Magic:   0x"
-            << std::hex
-            << std::uppercase
-            << imported.magic
-            << std::dec
-            << "\n"
-            << "  Version: " << imported.version << "\n"
-            << "  Objects: " << imported.objectCount << "\n\n";
+        printf("  Magic:   0x%x\n", imported.magic);
+        printf("  Version: %d\n", imported.version);
+        printf("  Objects: %d\n", imported.objectCount);
+        printf("\n");
+        
 
         // --------------------------------------------------
         // SaveGame → Binary
         // --------------------------------------------------
 
-        std::cout << "Writing binary save\n";
+        printf("Writing binary save\n");
 
         ac1::SaveWriter writer;
 
@@ -242,23 +230,21 @@ int main()
             rebuilt
         );
 
-        std::cout
-            << "  Size:   " << rebuilt.size() << " bytes\n"
-            << "  Output: \"" << outputPath.string() << "\"\n\n";
+        printf("  Size:   %zu bytes\n", rebuilt.size());
+        printf("  Output: \"%s\"\n\n", outputPath.string().c_str());
 
         // --------------------------------------------------
         // Compare
         // --------------------------------------------------
 
-        std::cout << "Comparing files\n";
+        printf("Comparing files\n");
 
         compareFiles(
             original,
             rebuilt
         );
 
-        std::cout
-            << "\nPASS: JSON round-trip is byte-identical!\n";
+        printf("\nPASS: JSON round-trip is byte-identical!\n");
 
         return 0;
     }

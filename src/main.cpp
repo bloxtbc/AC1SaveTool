@@ -137,33 +137,23 @@ static void writeTextFile(
 
 static void printUsage(const char* program)
 {
-    std::cout
-        << "AC1 Save Tool\n"
-        << "\n"
-        << "Usage:\n"
-        << "  " << program << " export <input.sav> <output.json>\n"
-        << "  " << program << " import <input.json> <output.sav>\n"
-        << "\n"
-        << "Examples:\n"
-        << "  " << program << " export testSave.sav testSave.json\n"
-        << "  " << program << " import testSave.json testSave.sav\n";
+    printf("AC1 Save Tool\n");
+    printf("\n");
+    printf("Usage:\n");
+    printf("  %s export <input.sav> <output.json>\n", program);
+    printf("  %s import <input.json> <output.sav>\n", program);
+    printf("\n");
+    printf("Examples:\n");
+    printf("  %s export testSave.sav testSave.json\n", program);
+    printf("  %s import testSave.json testSave.sav\n", program);
 }
 
 static void printSaveInfo(const ac1::SaveGame& save)
 {
-    std::cout
-        << "  Magic:   0x"
-        << std::hex
-        << std::uppercase
-        << save.magic
-        << std::dec
-        << "\n"
-        << "  Version: "
-        << save.version
-        << "\n"
-        << "  Objects: "
-        << save.objectCount
-        << "\n";
+    printf("Save Info:\n");
+    printf("  Magic:   0x%x\n", save.magic);
+    printf("  Version: %d\n", save.version);
+    printf("  Objects: %d\n", save.objectCount);
 }
 
 // -----------------------------------------------------------------------------
@@ -175,16 +165,14 @@ static int exportSave(
     const fs::path& outputPath
 )
 {
-    std::cout << "Exporting save\n";
-    std::cout << "  Input:  " << inputPath << "\n";
-    std::cout << "  Output: " << outputPath << "\n";
+
+    printf("Exporting save\n");
+    printf("  Input:  %s\n", inputPath.string().c_str());
+    printf("  Output: %s\n", outputPath.string().c_str());
 
     const auto data = readBinaryFile(inputPath);
 
-    std::cout
-        << "  Size:   "
-        << data.size()
-        << " bytes\n";
+    printf("  Size:   %zu bytes\n", data.size());
 
     ac1::SaveReader reader;
     const auto save = reader.read(data);
@@ -203,12 +191,9 @@ static int exportSave(
 
     writeTextFile(outputPath, json);
 
-    std::cout
-        << "  JSON:   "
-        << json.size()
-        << " bytes\n"
-        << "\n"
-        << "Export complete.\n";
+    printf("  JSON:   %zu bytes\n", json.size());
+    printf("\n");
+    printf("Export complete.\n");
 
     return 0;
 }
@@ -218,17 +203,14 @@ static int importSave(
     const fs::path& outputPath
 )
 {
-    std::cout << "Importing save\n";
-    std::cout << "  Input:  " << inputPath << "\n";
-    std::cout << "  Output: " << outputPath << "\n";
+    printf("Importing save\n");
+    printf("  Input:  %s\n", inputPath.string().c_str());
+    printf("  Output: %s\n", outputPath.string().c_str());
 
     const std::string json =
         readTextFile(inputPath);
 
-    std::cout
-        << "  JSON:   "
-        << json.size()
-        << " bytes\n";
+    printf("  JSON:   %zu bytes\n", json.size());
 
     const auto save =
         ac1::SaveJsonImporter::importSave(json);
@@ -248,12 +230,9 @@ static int importSave(
         )
     );
 
-    std::cout
-        << "  Size:   "
-        << data.size()
-        << " bytes\n"
-        << "\n"
-        << "Import complete.\n";
+    printf("  Size:   %zu bytes\n", data.size());
+    printf("\n");
+    printf("Import complete.\n");
 
     return 0;
 }
@@ -321,14 +300,13 @@ static std::string saveFileDialog(
 
 static int interactiveMode()
 {
-    std::cout
-        << "AC1 Save Tool\n"
-        << "=============\n\n"
-        << "What do you want to do?\n"
-        << "  1. Export save -> JSON\n"
-        << "  2. Import JSON -> save\n"
-        << "\n"
-        << "Select [1-2]: ";
+    printf("AC1 Save Tool\n");
+    printf("=============\n\n");
+    printf("What do you want to do?\n");
+    printf("  1. Export save -> JSON\n");
+    printf("  2. Import JSON -> save\n");
+    printf("\n");
+    printf("Select [1-2]: ");
 
     std::string choice;
     std::getline(std::cin, choice);
@@ -382,22 +360,19 @@ static int interactiveMode()
         outputExtension = "sav";
     }
 
-    std::cout << "\nSelect input file...\n";
+    printf("\nSelect input file...\n");
 
     const std::string input =
         openFileDialog(inputFilter, inputTitle);
 
     if (input.empty()) {
-        std::cout << "Cancelled.\n";
+        printf("Cancelled.\n");
         return 0;
     }
 
-    std::cout
-        << "Input: "
-        << input
-        << "\n\n";
+    printf("Input: %s\n\n", input.c_str());
 
-    std::cout << "Select output file...\n";
+    printf("Select output file...\n");
 
     const std::string output =
         saveFileDialog(
@@ -407,14 +382,11 @@ static int interactiveMode()
         );
 
     if (output.empty()) {
-        std::cout << "Cancelled.\n";
+        printf("Cancelled.\n");
         return 0;
     }
 
-    std::cout
-        << "Output: "
-        << output
-        << "\n\n";
+    printf("Output: %s\n\n", output.c_str());
 
     if (exportMode) {
         return exportSave(input, output);
