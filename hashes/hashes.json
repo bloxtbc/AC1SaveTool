@@ -1,0 +1,254 @@
+{
+ "59534803": [
+  "CityMarker"
+ ],
+ "182352896": [
+  "SpawnMode"
+ ],
+ "245999962": [
+  "MountIsChosen"
+ ],
+ "356220115": [
+  "AltairRankSaved"
+ ],
+ "418166524": [
+  "PersistedIDs"
+ ],
+ "440541947": [
+  "ResetMonitor"
+ ],
+ "494490051": [
+  "CitiesInKingdom"
+ ],
+ "529056539": [
+  "Options"
+ ],
+ "550671715": [
+  "ShowCtrlScheme"
+ ],
+ "561800778": [
+  "DaggerShoulderCount"
+ ],
+ "588182160": [
+  "MountIndex"
+ ],
+ "782802969": [
+  "Monitor"
+ ],
+ "822170364": [
+  "Accomplishments"
+ ],
+ "864635854": [
+  "HorseMonitorData"
+ ],
+ "955405642": [
+  "MainDaggerBeltCount"
+ ],
+ "988155343": [
+  "SelectedWeapon"
+ ],
+ "1027654762": [
+  "Vibration"
+ ],
+ "1142451046": [
+  "Count"
+ ],
+ "1170604816": [
+  "FreeMissionInformerCount"
+ ],
+ "1184746767": [
+  "AssassinMatrix"
+ ],
+ "1207356937": [
+  "MobileSpawnerPos"
+ ],
+ "1275278747": [
+  "DaggerBeltCount"
+ ],
+ "1361138523": [
+  "SetByPlayerMarker"
+ ],
+ "1496786106": [
+  "CheckPointOnlySemaphore"
+ ],
+ "1501289652": [
+  "AlwaysSaveWorldID"
+ ],
+ "1534400570": [
+  "InvertXLook"
+ ],
+ "1551827799": [
+  "AssassinSaved"
+ ],
+ "1573852237": [
+  "FreeMissionScholarsCount"
+ ],
+ "1575644396": [
+  "SFXVolume"
+ ],
+ "1649606143": [
+  "State"
+ ],
+ "1669243737": [
+  "XLookSensitivity"
+ ],
+ "1670108668": [
+  "IsResolved"
+ ],
+ "1712664970": [
+  "InvertYLook"
+ ],
+ "1849811038": [
+  "NothingIsTrueEverythingIsPermitted"
+ ],
+ "1922168126": [
+  "MarkerType"
+ ],
+ "1958527870": [
+  "AssassinOnMount"
+ ],
+ "2001406352": [
+  "MissionReplay"
+ ],
+ "2005069724": [
+  "UsedEvents"
+ ],
+ "2096795148": [
+  "MarkerPosition"
+ ],
+ "2105823925": [
+  "MobileSpawnerDir"
+ ],
+ "2113130176": [
+  "ShowBlood"
+ ],
+ "2178661708": [
+  "TotalNumSynchBlocks"
+ ],
+ "2181900433": [
+  "HoldToFocus"
+ ],
+ "2379497903": [
+  "Configs"
+ ],
+ "2385831596": [
+  "Markers"
+ ],
+ "2396801049": [
+  "MainSaveWorldID"
+ ],
+ "2407447650": [
+  "MapWorldInfo"
+ ],
+ "2465949767": [
+  "NoSaveSemaphore"
+ ],
+ "2489875330": [
+  "FreeMissionVigilantesCount"
+ ],
+ "2499365691": [
+  "GlobalTolerance"
+ ],
+ "2519455027": [
+  "Brightness"
+ ],
+ "2702571053": [
+  "Components"
+ ],
+ "2737467230": [
+  "UnlockedBlocksCount"
+ ],
+ "2747163608": [
+  "VoiceVolume"
+ ],
+ "2785163220": [
+  "DaggerLegCount"
+ ],
+ "2797770677": [
+  "CancelMonitor"
+ ],
+ "2867239103": [
+  "ToleranceSaved"
+ ],
+ "2871065487": [
+  "OtherMonitors"
+ ],
+ "2879431345": [
+  "NumSynchBlocks"
+ ],
+ "2911639119": [
+  "MainDaggerShoulderCount"
+ ],
+ "2916176588": [
+  "OutMonitor"
+ ],
+ "2969371692": [
+  "FogCells"
+ ],
+ "3068249190": [
+  "OptionalObjectivesCount"
+ ],
+ "3125686489": [
+  "IsAllUnfogged"
+ ],
+ "3144687493": [
+  "ShowGPS"
+ ],
+ "3155981222": [
+  "CurrentSaveWorldID"
+ ],
+ "3161216672": [
+  "IsKnown"
+ ],
+ "3197466611": [
+  "AltairMarker"
+ ],
+ "3246730187": [
+  "MountIsInWorld"
+ ],
+ "3440784072": [
+  "YLookSensitivity"
+ ],
+ "3494805540": [
+  "AltairCurrentRank"
+ ],
+ "3575369835": [
+  "MusicVolume"
+ ],
+ "3584634421": [
+  "ShowWeaponIcon"
+ ],
+ "3622219230": [
+  "CurrentMemoryBlock"
+ ],
+ "3664481400": [
+  "DefaultCompassMarker"
+ ],
+ "3678460294": [
+  "AltairNextRank"
+ ],
+ "3734200949": [
+  "xDE936275"
+ ],
+ "3776449165": [
+  "TextId"
+ ],
+ "3801967644": [
+  "InMonitor"
+ ],
+ "3847088039": [
+  "HighTolerance"
+ ],
+ "3870325847": [
+  "MainDaggerLegCount"
+ ],
+ "3872379813": [
+  "AutomaticMarkers"
+ ],
+ "3990271243": [
+  "ShowSyncBar"
+ ],
+ "4272727674": [
+  "OtherMonitor"
+ ]
+}

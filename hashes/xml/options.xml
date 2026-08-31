@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?info tool="AnvilToolkit" toolVersion="1.3.5" type="1"?>
+<Object ID="2106" Type="SaveGame" IsManaged="false">
+    <String Name="SaveGameName"></String>
+    <DynamicSmallArray Name="SaveGameObjects" Type="ObjectPtr">
+        <ObjectPtr ID="0" Type="SaveGameObject" PointerType="Inlined">
+            <Handle Name="Object" Type="ManagedObject" Path="DataPC\Game Bootstrap Settings\0000000000000836.AssassinMenuManager">2102</Handle>
+            <DynamicSmallArray Name="PropertyPath" Type="BaseObject">
+                <BaseObject ID="0" Type="PropertyPath">
+                    <DynamicSmallArray Name="PathNodes" Type="BaseObject">
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Options">529056539</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="ShowCtrlScheme">550671715</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                    </DynamicSmallArray>
+                    <Bool Name="TargetMustBeUnique">False</Bool>
+                    <Bool Name="WholeArray">False</Bool>
+                </BaseObject>
+                <BaseObject ID="0" Type="PropertyPath">
+                    <DynamicSmallArray Name="PathNodes" Type="BaseObject">
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Options">529056539</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="ShowWeaponIcon">3584634421</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                    </DynamicSmallArray>
+                    <Bool Name="TargetMustBeUnique">False</Bool>
+                    <Bool Name="WholeArray">False</Bool>
+                </BaseObject>
+                <BaseObject ID="0" Type="PropertyPath">
+                    <DynamicSmallArray Name="PathNodes" Type="BaseObject">
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Options">529056539</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="ShowSyncBar">3990271243</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                    </DynamicSmallArray>
+                    <Bool Name="TargetMustBeUnique">False</Bool>
+                    <Bool Name="WholeArray">False</Bool>
+                </BaseObject>
+                <BaseObject ID="0" Type="PropertyPath">
+                    <DynamicSmallArray Name="PathNodes" Type="BaseObject">
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Options">529056539</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="ShowGPS">3144687493</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                    </DynamicSmallArray>
+                    <Bool Name="TargetMustBeUnique">False</Bool>
+                    <Bool Name="WholeArray">False</Bool>
+                </BaseObject>
+                <BaseObject ID="0" Type="PropertyPath">
+                    <DynamicSmallArray Name="PathNodes" Type="BaseObject">
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Options">529056539</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="ShowBlood">2113130176</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                    </DynamicSmallArray>
+                    <Bool Name="TargetMustBeUnique">False</Bool>
+                    <Bool Name="WholeArray">False</Bool>
+                </BaseObject>
+                <BaseObject ID="0" Type="PropertyPath">
+                    <DynamicSmallArray Name="PathNodes" Type="BaseObject">
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Options">529056539</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Vibration">1027654762</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                    </DynamicSmallArray>
+                    <Bool Name="TargetMustBeUnique">False</Bool>
+                    <Bool Name="WholeArray">False</Bool>
+                </BaseObject>
+                <BaseObject ID="0" Type="PropertyPath">
+                    <DynamicSmallArray Name="PathNodes" Type="BaseObject">
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Options">529056539</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Brightness">2519455027</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                    </DynamicSmallArray>
+                    <Bool Name="TargetMustBeUnique">False</Bool>
+                    <Bool Name="WholeArray">False</Bool>
+                </BaseObject>
+                <BaseObject ID="0" Type="PropertyPath">
+                    <DynamicSmallArray Name="PathNodes" Type="BaseObject">
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Options">529056539</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="HoldToFocus">2181900433</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                    </DynamicSmallArray>
+                    <Bool Name="TargetMustBeUnique">False</Bool>
+                    <Bool Name="WholeArray">False</Bool>
+                </BaseObject>
+                <BaseObject ID="0" Type="PropertyPath">
+                    <DynamicSmallArray Name="PathNodes" Type="BaseObject">
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Options">529056539</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="InvertYLook">1712664970</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                    </DynamicSmallArray>
+                    <Bool Name="TargetMustBeUnique">False</Bool>
+                    <Bool Name="WholeArray">False</Bool>
+                </BaseObject>
+                <BaseObject ID="0" Type="PropertyPath">
+                    <DynamicSmallArray Name="PathNodes" Type="BaseObject">
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Options">529056539</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="InvertXLook">1534400570</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                    </DynamicSmallArray>
+                    <Bool Name="TargetMustBeUnique">False</Bool>
+                    <Bool Name="WholeArray">False</Bool>
+                </BaseObject>
+                <BaseObject ID="0" Type="PropertyPath">
+                    <DynamicSmallArray Name="PathNodes" Type="BaseObject">
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Options">529056539</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="YLookSensitivity">3440784072</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                    </DynamicSmallArray>
+                    <Bool Name="TargetMustBeUnique">False</Bool>
+                    <Bool Name="WholeArray">False</Bool>
+                </BaseObject>
+                <BaseObject ID="0" Type="PropertyPath">
+                    <DynamicSmallArray Name="PathNodes" Type="BaseObject">
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Options">529056539</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="XLookSensitivity">1669243737</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                    </DynamicSmallArray>
+                    <Bool Name="TargetMustBeUnique">False</Bool>
+                    <Bool Name="WholeArray">False</Bool>
+                </BaseObject>
+                <BaseObject ID="0" Type="PropertyPath">
+                    <DynamicSmallArray Name="PathNodes" Type="BaseObject">
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Options">529056539</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="SFXVolume">1575644396</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                    </DynamicSmallArray>
+                    <Bool Name="TargetMustBeUnique">False</Bool>
+                    <Bool Name="WholeArray">False</Bool>
+                </BaseObject>
+                <BaseObject ID="0" Type="PropertyPath">
+                    <DynamicSmallArray Name="PathNodes" Type="BaseObject">
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Options">529056539</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="MusicVolume">3575369835</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                    </DynamicSmallArray>
+                    <Bool Name="TargetMustBeUnique">False</Bool>
+                    <Bool Name="WholeArray">False</Bool>
+                </BaseObject>
+                <BaseObject ID="0" Type="PropertyPath">
+                    <DynamicSmallArray Name="PathNodes" Type="BaseObject">
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="Options">529056539</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                        <BaseObject ID="0" Type="PropertyPathNode">
+                            <Hash32 Name="TargetPropertyID" HashValue="VoiceVolume">2747163608</Hash32>
+                            <Signed32 Name="ConditionPropertyID">0</Signed32>
+                            <Unsigned32 Name="ConditionData">0</Unsigned32>
+                            <Signed32 Name="Condition2PropertyID">0</Signed32>
+                            <Unsigned32 Name="Condition2Data">0</Unsigned32>
+                            <ObjectPtr Name="NodeSolver" PointerType="Null" />
+                            <Unsigned16 Name="Index">65535</Unsigned16>
+                            <Enum Name="Condition" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Enum Name="Condition2" Type="PropertyPathNode::NodeCondition" Value="NC_NOCONDITION">0</Enum>
+                            <Bool Name="MatchAllConditions">True</Bool>
+                            <Bool Name="ArrayMultiTargetting">False</Bool>
+                        </BaseObject>
+                    </DynamicSmallArray>
+                    <Bool Name="TargetMustBeUnique">False</Bool>
+                    <Bool Name="WholeArray">False</Bool>
+                </BaseObject>
+            </DynamicSmallArray>
+            <Unsigned64 Name="ClassSignature">12963044388181724051</Unsigned64>
+            <Bool Name="AllowReferencesParsing">False</Bool>
+            <DynamicProperties>
+                <DynamicProperty Name="1" ArrayType="Char" BaseType="Bool" ObjectType="x0">
+                    <Bool>True</Bool>
+                </DynamicProperty>
+                <DynamicProperty Name="2" ArrayType="Char" BaseType="Bool" ObjectType="x0">
+                    <Bool>True</Bool>
+                </DynamicProperty>
+                <DynamicProperty Name="3" ArrayType="Char" BaseType="Bool" ObjectType="x0">
+                    <Bool>True</Bool>
+                </DynamicProperty>
+                <DynamicProperty Name="4" ArrayType="Char" BaseType="Bool" ObjectType="x0">
+                    <Bool>True</Bool>
+                </DynamicProperty>
+                <DynamicProperty Name="5" ArrayType="Char" BaseType="Bool" ObjectType="x0">
+                    <Bool>True</Bool>
+                </DynamicProperty>
+                <DynamicProperty Name="6" ArrayType="Char" BaseType="Bool" ObjectType="x0">
+                    <Bool>True</Bool>
+                </DynamicProperty>
+                <DynamicProperty Name="7" ArrayType="Signed16" BaseType="Unsigned32" ObjectType="x0">
+                    <Unsigned32>5</Unsigned32>
+                </DynamicProperty>
+                <DynamicProperty Name="8" ArrayType="Char" BaseType="Bool" ObjectType="x0">
+                    <Bool>False</Bool>
+                </DynamicProperty>
+                <DynamicProperty Name="9" ArrayType="Char" BaseType="Bool" ObjectType="x0">
+                    <Bool>False</Bool>
+                </DynamicProperty>
+                <DynamicProperty Name="10" ArrayType="Char" BaseType="Bool" ObjectType="x0">
+                    <Bool>False</Bool>
+                </DynamicProperty>
+                <DynamicProperty Name="11" ArrayType="Signed16" BaseType="Unsigned32" ObjectType="x0">
+                    <Unsigned32>5</Unsigned32>
+                </DynamicProperty>
+                <DynamicProperty Name="12" ArrayType="Signed16" BaseType="Unsigned32" ObjectType="x0">
+                    <Unsigned32>5</Unsigned32>
+                </DynamicProperty>
+                <DynamicProperty Name="13" ArrayType="Bool" BaseType="Unsigned32" ObjectType="x0">
+                    <Unsigned32>10</Unsigned32>
+                </DynamicProperty>
+                <DynamicProperty Name="14" ArrayType="Bool" BaseType="Unsigned32" ObjectType="x0">
+                    <Unsigned32>10</Unsigned32>
+                </DynamicProperty>
+                <DynamicProperty Name="15" ArrayType="Bool" BaseType="Unsigned32" ObjectType="x0">
+                    <Unsigned32>10</Unsigned32>
+                </DynamicProperty>
+            </DynamicProperties>
+        </ObjectPtr>
+    </DynamicSmallArray>
+</Object>
