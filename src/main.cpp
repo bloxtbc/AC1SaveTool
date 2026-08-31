@@ -353,14 +353,16 @@ static int interactiveMode()
 
     if (exportMode) {
         inputFilter =
-            "AC1 Save Files (*.sav)\0*.sav\0"
+            "AC1 Save Files (*.sav;*.opt)\0*.sav;*.opt\0"
+            "Save Files (*.sav)\0*.sav\0"
+            "Option Files (*.opt)\0*.opt\0"
             "All Files (*.*)\0*.*\0";
 
         outputFilter =
             "JSON Files (*.json)\0*.json\0"
             "All Files (*.*)\0*.*\0";
 
-        inputTitle = "Select AC1 Save File";
+        inputTitle = "Select AC1 Save or Option File";
         outputTitle = "Save JSON File";
         outputExtension = "json";
     }
@@ -370,11 +372,13 @@ static int interactiveMode()
             "All Files (*.*)\0*.*\0";
 
         outputFilter =
-            "AC1 Save Files (*.sav)\0*.sav\0"
+            "AC1 Save Files (*.sav;*.opt)\0*.sav;*.opt\0"
+            "Save Files (*.sav)\0*.sav\0"
+            "Option Files (*.opt)\0*.opt\0"
             "All Files (*.*)\0*.*\0";
 
         inputTitle = "Select JSON File";
-        outputTitle = "Save AC1 Save File";
+        outputTitle = "Save AC1 Save or Option File";
         outputExtension = "sav";
     }
 
