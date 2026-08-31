@@ -147,10 +147,8 @@ PropertyValue valueFromJson(const json& valueJson)
         case SerializerFieldType::UInt32Alt:
         case SerializerFieldType::HashOrId:
         case SerializerFieldType::UInt32Alt2:
+        case SerializerFieldType::UInt32Alt3:
             result.data = valueJson.at("value").get<uint32_t>();
-            break;
-        case SerializerFieldType::Float32:
-            result.data = valueJson.at("value").get<float>();
             break;
         case SerializerFieldType::Float64:
             if (valueJson.at("value").is_string()) {
@@ -258,7 +256,7 @@ Property propertyFromJson(const json& propertyJson)
         {
             property.payload =
                 PropertyType04{
-                    payload.at("a").get<uint32_t>(),
+                    propertyJson.at("refId").get<uint32_t>(),
                     payload.at("b").get<uint32_t>(),
                     payload.at("c").get<uint32_t>(),
                     payload.at("d").get<uint32_t>(),
@@ -273,7 +271,7 @@ Property propertyFromJson(const json& propertyJson)
         {
             property.payload =
                 PropertyType05{
-                    payload.at("a").get<uint32_t>(),
+                    propertyJson.at("refId").get<uint32_t>(),
                     payload.at("b").get<uint32_t>(),
                     payload.at("c").get<uint32_t>(),
                     payload.at("d").get<uint32_t>(),

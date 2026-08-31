@@ -446,7 +446,7 @@ Currently identified types include:
 0x03  Int8Alt2
 0x04  UInt16
 0x05  Int16
-0x06  Float32
+0x06  UInt32Alt3
 0x07  UInt32
 0x08  Float64
 0x09  UInt64

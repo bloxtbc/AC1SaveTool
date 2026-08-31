@@ -20,7 +20,7 @@ constexpr FieldTypeInfo kFieldTypeInfo[] = {
     {"Int8Alt2", SerializerFieldType::Int8Alt2},
     {"UInt16", SerializerFieldType::UInt16},
     {"Int16", SerializerFieldType::Int16},
-    {"Float32", SerializerFieldType::Float32},
+    {"UInt32Alt3", SerializerFieldType::UInt32Alt3},
     {"UInt32", SerializerFieldType::UInt32},
     {"Float64", SerializerFieldType::Float64},
     {"UInt64", SerializerFieldType::UInt64},

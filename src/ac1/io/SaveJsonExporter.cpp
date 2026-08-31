@@ -82,9 +82,8 @@ PropertyValueData propertyValueDataForType(SerializerFieldType type, const json&
         case SerializerFieldType::UInt32Alt:
         case SerializerFieldType::HashOrId:
         case SerializerFieldType::UInt32Alt2:
+        case SerializerFieldType::UInt32Alt3:
             return valueJson.get<uint32_t>();
-        case SerializerFieldType::Float32:
-            return valueJson.get<float>();
         case SerializerFieldType::UInt64:
             return static_cast<uint64_t>(std::stoull(valueJson.get<std::string>(), nullptr, 0));
         case SerializerFieldType::Float64:
@@ -134,10 +133,13 @@ inline void addHash(
     json& object,
     const char* valueKey,
     uint32_t value,
-    const HashDatabase* hashes
+    const HashDatabase* hashes,
+    bool includeHash = true
 )
 {
-    object[valueKey] = value;
+    if (includeHash) {
+        object[valueKey] = value;
+    }
 
     if (hashes) {
         if (const auto* name = hashes->lookupName(value)) {
@@ -157,20 +159,19 @@ void addValueHash(
         return;
     }
 
-    std::visit(
+    addHash(result, "propertyId", property.id, hashes,false);
+
+     std::visit(
         [&result, hashes](const auto& payload) {
             using T = std::decay_t<decltype(payload)>;
 
             if constexpr (
                 std::is_same_v<T, PropertyType02> ||
-                std::is_same_v<T, PropertyType03>
+                std::is_same_v<T, PropertyType03> ||
+                std::is_same_v<T, PropertyType04> ||
+                std::is_same_v<T, PropertyType05>
             ) {
-                addHash(
-                    result,
-                    "hash",
-                    payload.refId,
-                    hashes
-                );
+                addHash(result,"refHash",payload.refId,hashes,false);
             }
         },
         property.payload
@@ -203,10 +204,8 @@ json valueToJson(const PropertyValue& value, const Property* property, const Has
         case SerializerFieldType::UInt32Alt:
         case SerializerFieldType::HashOrId:
         case SerializerFieldType::UInt32Alt2:
+        case SerializerFieldType::UInt32Alt3:
             result["value"] = std::get<uint32_t>(value.data);
-            break;
-        case SerializerFieldType::Float32:
-            result["value"] = std::get<float>(value.data);
             break;
         case SerializerFieldType::UInt64:
             result["value"] = hex64(std::get<uint64_t>(value.data));
@@ -277,14 +276,14 @@ json propertyToJson(const Property& property, const HashDatabase* hashes)
             data["refIndex"] = payload.refIndex;
             data["flags"] = payload.flags;
         } else if constexpr (std::is_same_v<T, PropertyType04>) {
-            data["a"] = payload.a;
+            addHash(result, "refId", payload.refId, hashes);
             data["b"] = payload.b;
             data["c"] = payload.c;
             data["d"] = payload.d;
             data["e"] = payload.e;
             data["f"] = payload.f;
         } else if constexpr (std::is_same_v<T, PropertyType05>) {
-            data["a"] = payload.a;
+            addHash(result, "refId", payload.refId, hashes);
             data["b"] = payload.b;
             data["c"] = payload.c;
             data["d"] = payload.d;

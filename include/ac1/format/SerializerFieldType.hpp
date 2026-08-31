@@ -12,7 +12,7 @@ enum class SerializerFieldType : uint32_t {
     Int8Alt2    = 0x03,
     UInt16      = 0x04,
     Int16       = 0x05,
-    Float32     = 0x06,
+    UInt32Alt3     = 0x06,
     UInt32      = 0x07,
     Float64     = 0x08,
     UInt64      = 0x09,

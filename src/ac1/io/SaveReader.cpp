@@ -67,10 +67,8 @@ PropertyValue SaveReader::readValue(BinaryReader& reader, SerializerFieldType ty
         case SerializerFieldType::UInt32Alt:
         case SerializerFieldType::HashOrId:
         case SerializerFieldType::UInt32Alt2:
+        case SerializerFieldType::UInt32Alt3:
             value.data = reader.u32be();
-            break;
-        case SerializerFieldType::Float32:
-            value.data = reader.f32be();
             break;
         case SerializerFieldType::UInt64:
             value.data = reader.u64be();

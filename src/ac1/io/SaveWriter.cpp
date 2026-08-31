@@ -76,7 +76,7 @@ void SaveWriter::writeProperty(BinaryWriter& writer, const Property& property)
         }
         case 4: {
             const auto& payload = std::get<PropertyType04>(property.payload);
-            writer.u32be(payload.a);
+            writer.u32be(payload.refId);
             writer.u32be(payload.b);
             writer.u32be(payload.c);
             writer.u32be(payload.d);
@@ -86,7 +86,7 @@ void SaveWriter::writeProperty(BinaryWriter& writer, const Property& property)
         }
         case 5: {
             const auto& payload = std::get<PropertyType05>(property.payload);
-            writer.u32be(payload.a);
+            writer.u32be(payload.refId);
             writer.u32be(payload.b);
             writer.u32be(payload.c);
             writer.u32be(payload.d);
@@ -146,18 +146,19 @@ void SaveWriter::writeValue(BinaryWriter& writer, const PropertyValue& value)
         case SerializerFieldType::UInt32:
         case SerializerFieldType::UInt32Alt:
         case SerializerFieldType::HashOrId:
+        case SerializerFieldType::UInt32Alt3:
         case SerializerFieldType::UInt32Alt2: {
             const auto* data = std::get_if<uint32_t>(&value.data);
             if (!data) throw std::runtime_error("PropertyValue type mismatch: UInt32");
             writer.u32be(*data);
             break;
         }
-        case SerializerFieldType::Float32: {
-            const auto* data = std::get_if<float>(&value.data);
-            if (!data) throw std::runtime_error("PropertyValue type mismatch: Float32");
-            writer.f32be(*data);
-            break;
-        }
+        // case SerializerFieldType::Float32: {
+        //     const auto* data = std::get_if<float>(&value.data);
+        //     if (!data) throw std::runtime_error("PropertyValue type mismatch: Float32");
+        //     writer.f32be(*data);
+        //     break;
+        // }
         case SerializerFieldType::UInt64: {
             const auto* data = std::get_if<uint64_t>(&value.data);
             if (!data) throw std::runtime_error("PropertyValue type mismatch: UInt64");
