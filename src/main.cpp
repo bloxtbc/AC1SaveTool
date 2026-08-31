@@ -14,6 +14,11 @@
 #include "ac1/io/SaveJsonExporter.hpp"
 #include "ac1/io/SaveJsonImporter.hpp"
 
+#ifdef _WIN32
+#include <windows.h>
+#include <commdlg.h>
+#endif
+
 namespace fs = std::filesystem;
 
 // -----------------------------------------------------------------------------
@@ -253,6 +258,169 @@ static int importSave(
     return 0;
 }
 
+#ifdef _WIN32
+
+static std::string openFileDialog(
+    const char* filter,
+    const char* title
+)
+{
+    char filename[MAX_PATH] = {};
+
+    OPENFILENAMEA dialog{};
+    dialog.lStructSize = sizeof(dialog);
+    dialog.hwndOwner = nullptr;
+    dialog.lpstrFile = filename;
+    dialog.nMaxFile = MAX_PATH;
+    dialog.lpstrFilter = filter;
+    dialog.nFilterIndex = 1;
+    dialog.lpstrTitle = title;
+    dialog.Flags =
+        OFN_PATHMUSTEXIST |
+        OFN_FILEMUSTEXIST |
+        OFN_NOCHANGEDIR;
+
+    if (!GetOpenFileNameA(&dialog)) {
+        return {};
+    }
+
+    return filename;
+}
+
+static std::string saveFileDialog(
+    const char* filter,
+    const char* title,
+    const char* defaultExtension
+)
+{
+    char filename[MAX_PATH] = {};
+
+    OPENFILENAMEA dialog{};
+    dialog.lStructSize = sizeof(dialog);
+    dialog.hwndOwner = nullptr;
+    dialog.lpstrFile = filename;
+    dialog.nMaxFile = MAX_PATH;
+    dialog.lpstrFilter = filter;
+    dialog.nFilterIndex = 1;
+    dialog.lpstrTitle = title;
+    dialog.lpstrDefExt = defaultExtension;
+    dialog.Flags =
+        OFN_PATHMUSTEXIST |
+        OFN_OVERWRITEPROMPT |
+        OFN_NOCHANGEDIR;
+
+    if (!GetSaveFileNameA(&dialog)) {
+        return {};
+    }
+
+    return filename;
+}
+
+#endif
+
+
+static int interactiveMode()
+{
+    std::cout
+        << "AC1 Save Tool\n"
+        << "=============\n\n"
+        << "What do you want to do?\n"
+        << "  1. Export save -> JSON\n"
+        << "  2. Import JSON -> save\n"
+        << "\n"
+        << "Select [1-2]: ";
+
+    std::string choice;
+    std::getline(std::cin, choice);
+
+    if (choice != "1" && choice != "2") {
+        std::cerr << "\nInvalid selection.\n";
+        return 1;
+    }
+
+#ifndef _WIN32
+    std::cerr << "\nInteractive file selection is only supported on Windows.\n";
+    return 1;
+#else
+
+    const bool exportMode = choice == "1";
+
+    const char* inputFilter;
+    const char* outputFilter;
+    const char* inputTitle;
+    const char* outputTitle;
+    const char* outputExtension;
+
+    if (exportMode) {
+        inputFilter =
+            "AC1 Save Files (*.sav)\0*.sav\0"
+            "All Files (*.*)\0*.*\0";
+
+        outputFilter =
+            "JSON Files (*.json)\0*.json\0"
+            "All Files (*.*)\0*.*\0";
+
+        inputTitle = "Select AC1 Save File";
+        outputTitle = "Save JSON File";
+        outputExtension = "json";
+    }
+    else {
+        inputFilter =
+            "JSON Files (*.json)\0*.json\0"
+            "All Files (*.*)\0*.*\0";
+
+        outputFilter =
+            "AC1 Save Files (*.sav)\0*.sav\0"
+            "All Files (*.*)\0*.*\0";
+
+        inputTitle = "Select JSON File";
+        outputTitle = "Save AC1 Save File";
+        outputExtension = "sav";
+    }
+
+    std::cout << "\nSelect input file...\n";
+
+    const std::string input =
+        openFileDialog(inputFilter, inputTitle);
+
+    if (input.empty()) {
+        std::cout << "Cancelled.\n";
+        return 0;
+    }
+
+    std::cout
+        << "Input: "
+        << input
+        << "\n\n";
+
+    std::cout << "Select output file...\n";
+
+    const std::string output =
+        saveFileDialog(
+            outputFilter,
+            outputTitle,
+            outputExtension
+        );
+
+    if (output.empty()) {
+        std::cout << "Cancelled.\n";
+        return 0;
+    }
+
+    std::cout
+        << "Output: "
+        << output
+        << "\n\n";
+
+    if (exportMode) {
+        return exportSave(input, output);
+    }
+
+    return importSave(input, output);
+
+#endif
+}
+
 // -----------------------------------------------------------------------------
 // Main
 // -----------------------------------------------------------------------------
@@ -260,6 +428,11 @@ static int importSave(
 int main(int argc, char* argv[])
 {
     try {
+
+        if (argc == 1) {
+            return interactiveMode();
+        }
+
         if (argc != 4) {
             printUsage(argv[0]);
             return 1;

@@ -43,6 +43,10 @@ target_link_libraries(ac1save
         ac1save_lib
 )
 
+if (WIN32)
+    target_link_libraries(ac1save PRIVATE comdlg32)
+endif()
+
 if(MINGW)
     target_link_options(ac1save PRIVATE
         -static-libgcc
@@ -56,7 +60,6 @@ add_custom_command(TARGET ac1save POST_BUILD
         "${PROJECT_SOURCE_DIR}/hashes/hashes.json"
         "$<TARGET_FILE_DIR:ac1save>/hashes.json"
 )
-
 
 # --------------------------------------------------------------------------
 # Warnings
@@ -135,4 +138,45 @@ add_custom_command(
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         "${CMAKE_SOURCE_DIR}/hashes/hashes.json"
         "$<TARGET_FILE_DIR:ac1save_json_roundtrip>/hashes.json"
+)
+
+# --------------------------------------------------------------------------
+# Release packaging
+# --------------------------------------------------------------------------
+
+set(RELEASE_NAME "AC1SaveTool-${PROJECT_VERSION}-win32")
+set(RELEASE_ROOT "${CMAKE_BINARY_DIR}/release")
+set(RELEASE_DIR "${RELEASE_ROOT}/${RELEASE_NAME}")
+set(RELEASE_PACKAGE "${CMAKE_BINARY_DIR}/${RELEASE_NAME}.zip")
+
+add_custom_target(package_release
+    COMMAND ${CMAKE_COMMAND} -E remove_directory
+        "${RELEASE_DIR}"
+
+    COMMAND ${CMAKE_COMMAND} -E remove
+        "${RELEASE_PACKAGE}"
+
+    COMMAND ${CMAKE_COMMAND} -E make_directory
+        "${RELEASE_DIR}"
+
+    COMMAND ${CMAKE_COMMAND} -E copy
+        "$<TARGET_FILE:ac1save>"
+        "${RELEASE_DIR}/ac1save.exe"
+
+    COMMAND ${CMAKE_COMMAND} -E copy
+        "${PROJECT_SOURCE_DIR}/hashes/hashes.json"
+        "${RELEASE_DIR}/hashes.json"
+
+    COMMAND ${CMAKE_COMMAND} -E copy
+        "${PROJECT_SOURCE_DIR}/README.md"
+        "${RELEASE_DIR}/README.md"
+
+    COMMAND powershell.exe
+        -NoProfile
+        -Command
+        "Compress-Archive -Path '${RELEASE_DIR}/*' -DestinationPath '${RELEASE_PACKAGE}'"
+
+    DEPENDS ac1save
+
+    COMMENT "Packaging AC1SaveTool ${PROJECT_VERSION}"
 )
