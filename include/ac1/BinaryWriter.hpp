@@ -24,7 +24,6 @@ public:
     void bytes(const std::byte* data, std::size_t size);
 
     const std::vector<std::byte>& data() const;
-
     std::vector<std::byte> take();
 
     std::size_t position() const;
@@ -33,4 +32,4 @@ private:
     std::vector<std::byte> data_;
 };
 
-}
+} // namespace ac1

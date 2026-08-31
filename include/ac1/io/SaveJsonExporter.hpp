@@ -2,8 +2,8 @@
 
 #include <string>
 
-#include "format/SaveGame.hpp"
-#include "HashDatabase.hpp"
+#include "ac1/HashDatabase.hpp"
+#include "ac1/format/SaveGame.hpp"
 
 namespace ac1 {
 
@@ -16,4 +16,4 @@ public:
     );
 };
 
-}
+} // namespace ac1

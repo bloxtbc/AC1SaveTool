@@ -11,17 +11,17 @@ class BinaryReader {
 public:
     explicit BinaryReader(std::span<const std::byte> data);
 
-    uint8_t  u8();
+    uint8_t u8();
     uint16_t u16be();
     uint32_t u32be();
     uint64_t u64be();
 
-    int8_t   i8();
-    int16_t  i16be();
-    int32_t  i32be();
-    int64_t  i64be();
+    int8_t i8();
+    int16_t i16be();
+    int32_t i32be();
+    int64_t i64be();
 
-    float  f32be();
+    float f32be();
     double f64be();
 
     std::span<const std::byte> bytes(std::size_t count);
@@ -38,4 +38,4 @@ private:
     std::size_t position_ = 0;
 };
 
-}
+} // namespace ac1

@@ -1,4 +1,4 @@
-#include "HashDatabase.hpp"
+#include "ac1/HashDatabase.hpp"
 
 #include <nlohmann/json.hpp>
 
@@ -9,14 +9,11 @@ namespace ac1 {
 
 using json = nlohmann::json;
 
-void HashDatabase::load(const std::string& path)
-{
+void HashDatabase::load(const std::string& path) {
     std::ifstream file(path);
 
     if (!file) {
-        throw std::runtime_error(
-            "Failed to open hash database: " + path
-        );
+        throw std::runtime_error("Failed to open hash database: " + path);
     }
 
     json data;
@@ -25,24 +22,17 @@ void HashDatabase::load(const std::string& path)
     hashes_.clear();
 
     for (const auto& [key, value] : data.items()) {
-        uint32_t hash;
-
+        uint32_t hash = 0;
         try {
-            hash = static_cast<uint32_t>(
-                std::stoul(key)
-            );
-        }
-        catch (...) {
+            hash = static_cast<uint32_t>(std::stoul(key));
+        } catch (...) {
             continue;
         }
 
         std::vector<std::string> names;
-
         for (const auto& name : value) {
             if (name.is_string()) {
-                names.push_back(
-                    name.get<std::string>()
-                );
+                names.push_back(name.get<std::string>());
             }
         }
 
@@ -50,30 +40,20 @@ void HashDatabase::load(const std::string& path)
     }
 }
 
-const std::vector<std::string>* HashDatabase::lookup(
-    uint32_t hash
-) const
-{
-    auto it = hashes_.find(hash);
-
+const std::vector<std::string>* HashDatabase::lookup(uint32_t hash) const {
+    const auto it = hashes_.find(hash);
     if (it == hashes_.end()) {
         return nullptr;
     }
-
     return &it->second;
 }
 
-const std::string* HashDatabase::lookupName(
-    uint32_t hash
-) const
-{
-    auto it = hashes_.find(hash);
-
+const std::string* HashDatabase::lookupName(uint32_t hash) const {
+    const auto it = hashes_.find(hash);
     if (it == hashes_.end() || it->second.empty()) {
         return nullptr;
     }
-
     return &it->second.front();
 }
 
-}
+} // namespace ac1

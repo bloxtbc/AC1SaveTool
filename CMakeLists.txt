@@ -14,14 +14,15 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # --------------------------------------------------------------------------
 
 add_library(ac1save_lib
-    src/BinaryReader.cpp
-    src/BinaryWriter.cpp
-    src/HashDatabase.cpp
-    src/format/PropertyMetadata.cpp
-    src/io/SaveReader.cpp
-    src/io/SaveWriter.cpp
-    src/io/SaveJsonExporter.cpp
-    src/io/SaveJsonImporter.cpp
+    src/ac1/BinaryReader.cpp
+    src/ac1/BinaryWriter.cpp
+    src/ac1/HashDatabase.cpp
+    src/ac1/format/SerializerFieldType.cpp
+    src/ac1/format/PropertyMetadata.cpp
+    src/ac1/io/SaveReader.cpp
+    src/ac1/io/SaveWriter.cpp
+    src/ac1/io/SaveJsonExporter.cpp
+    src/ac1/io/SaveJsonImporter.cpp
 )
 
 target_include_directories(ac1save_lib

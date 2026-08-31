@@ -2,7 +2,10 @@
 
 #include <cstdint>
 #include <vector>
-#include "SaveGameObject.hpp"
+
+#include "ac1/format/SaveGameObject.hpp"
+
+namespace ac1 {
 
 struct SaveGame {
     uint32_t fileSize;
@@ -12,3 +15,5 @@ struct SaveGame {
 
     std::vector<SaveGameObject> objects;
 };
+
+} // namespace ac1

@@ -3,8 +3,8 @@
 #include <cstddef>
 #include <span>
 
-#include "BinaryReader.hpp"
-#include "format/SaveGame.hpp"
+#include "ac1/BinaryReader.hpp"
+#include "ac1/format/SaveGame.hpp"
 
 namespace ac1 {
 
@@ -25,4 +25,4 @@ private:
     );
 };
 
-}
+} // namespace ac1

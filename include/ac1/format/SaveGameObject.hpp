@@ -3,10 +3,11 @@
 #include <cstdint>
 #include <vector>
 
-#include "Property.hpp"
-#include "PropertyMetadata.hpp"
-#include "PropertyValue.hpp"
+#include "ac1/format/Property.hpp"
+#include "ac1/format/PropertyMetadata.hpp"
+#include "ac1/format/PropertyValue.hpp"
 
+namespace ac1 {
 
 struct SaveGameObject {
     uint32_t classID;
@@ -20,3 +21,5 @@ struct SaveGameObject {
 
     std::vector<PropertyValue> values;
 };
+
+} // namespace ac1
