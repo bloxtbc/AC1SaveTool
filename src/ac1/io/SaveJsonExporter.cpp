@@ -129,10 +129,62 @@ PropertyValueData propertyValueDataForType(SerializerFieldType type, const json&
     }
 }
 
-json valueToJson(const PropertyValue& value)
+
+inline void addHash(
+    json& object,
+    const char* valueKey,
+    uint32_t value,
+    const HashDatabase* hashes
+)
+{
+    object[valueKey] = value;
+
+    if (hashes) {
+        if (const auto* name = hashes->lookupName(value)) {
+            std::string nameKey = std::string(valueKey) + "Hash";
+            object[nameKey] = *name;
+        }
+    }
+}
+
+void addValueHash(
+    json& result,
+    const Property& property,
+    const HashDatabase* hashes
+)
+{
+    if (!hashes) {
+        return;
+    }
+
+    std::visit(
+        [&result, hashes](const auto& payload) {
+            using T = std::decay_t<decltype(payload)>;
+
+            if constexpr (
+                std::is_same_v<T, PropertyType02> ||
+                std::is_same_v<T, PropertyType03>
+            ) {
+                addHash(
+                    result,
+                    "hash",
+                    payload.refId,
+                    hashes
+                );
+            }
+        },
+        property.payload
+    );
+}
+
+json valueToJson(const PropertyValue& value, const Property* property, const HashDatabase* hashes)
 {
     json result;
     result["type"] = serializerFieldTypeNameOrThrow(value.type);
+
+    if (property) {
+        addValueHash(result, *property, hashes);
+    }
 
     switch (value.type) {
         case SerializerFieldType::Bool:
@@ -206,27 +258,22 @@ json propertyToJson(const Property& property, const HashDatabase* hashes)
 {
     json result;
     result["propType"] = property.propType;
-    result["id"] = property.id;
-    if (hashes) {
-        if (const auto* name = hashes->lookupName(property.id)) {
-            result["name"] = *name;
-        }
-    }
+    addHash(result, "id", property.id, hashes);
     result["index"] = property.index;
 
-    std::visit([&result](const auto& payload) {
+    std::visit([&result, hashes](const auto& payload) {
         using T = std::decay_t<decltype(payload)>;
         json data;
         if constexpr (std::is_same_v<T, PropertyType01>) {
             data["value"] = payload.value;
         } else if constexpr (std::is_same_v<T, PropertyType02>) {
-            data["refId"] = payload.refId;
+            addHash(result, "refId", payload.refId, hashes);
             data["refIndex"] = payload.refIndex;
             data["flags"] = payload.flags;
         } else if constexpr (std::is_same_v<T, PropertyType03>) {
             data["unk1"] = payload.unk1;
             data["unk2"] = payload.unk2;
-            data["refId"] = payload.refId;
+            addHash(result, "refId", payload.refId, hashes);
             data["refIndex"] = payload.refIndex;
             data["flags"] = payload.flags;
         } else if constexpr (std::is_same_v<T, PropertyType04>) {
@@ -306,8 +353,23 @@ std::string SaveJsonExporter::exportSave(
         objectJson["metadata"] = metadata;
 
         json values = json::array();
-        for (const auto& value : object.values) {
-            values.push_back(valueToJson(value));
+
+        for (std::size_t i = 0; i < object.values.size(); ++i) {
+            const auto& value = object.values[i];
+
+            const Property* property = nullptr;
+
+            if (i < object.properties.size()) {
+                property = &object.properties[i];
+            }
+
+            values.push_back(
+                valueToJson(
+                    value,
+                    property,
+                    hashes
+                )
+            );
         }
         objectJson["values"] = values;
 

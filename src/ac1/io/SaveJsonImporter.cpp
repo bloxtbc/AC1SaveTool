@@ -203,33 +203,111 @@ PropertyValue valueFromJson(const json& valueJson)
 Property propertyFromJson(const json& propertyJson)
 {
     Property property{};
-    property.propType = propertyJson.at("propType").get<uint8_t>();
-    property.id = propertyJson.at("id").get<uint32_t>();
-    property.index = propertyJson.at("index").get<uint16_t>();
 
-    const auto& payload = propertyJson.at("payload");
+    property.propType =
+        propertyJson.at("propType").get<uint8_t>();
+
+    property.id =
+        propertyJson.at("id").get<uint32_t>();
+
+    property.index =
+        propertyJson.at("index").get<uint16_t>();
+
+    const auto& payload =
+        propertyJson.at("payload");
 
     switch (property.propType) {
+
         case 1:
-            property.payload = PropertyType01{ payload.at("value").get<uint32_t>() };
+        {
+            property.payload =
+                PropertyType01{
+                    payload.at("value").get<uint32_t>()
+                };
+
             break;
+        }
+
         case 2:
-            property.payload = PropertyType02{ payload.at("refId").get<uint32_t>(), payload.at("refIndex").get<uint16_t>(), payload.at("flags").get<uint32_t>() };
+        {
+            property.payload =
+                PropertyType02{
+                    propertyJson.at("refId").get<uint32_t>(),
+                    payload.at("refIndex").get<uint16_t>(),
+                    payload.at("flags").get<uint32_t>()
+                };
+
             break;
+        }
+
         case 3:
-            property.payload = PropertyType03{ payload.at("unk1").get<uint32_t>(), payload.at("unk2").get<uint16_t>(), payload.at("refId").get<uint32_t>(), payload.at("refIndex").get<uint16_t>(), payload.at("flags").get<uint32_t>() };
+        {
+            property.payload =
+                PropertyType03{
+                    payload.at("unk1").get<uint32_t>(),
+                    payload.at("unk2").get<uint16_t>(),
+                    propertyJson.at("refId").get<uint32_t>(),
+                    payload.at("refIndex").get<uint16_t>(),
+                    payload.at("flags").get<uint32_t>()
+                };
+
             break;
+        }
+
         case 4:
-            property.payload = PropertyType04{ payload.at("a").get<uint32_t>(), payload.at("b").get<uint32_t>(), payload.at("c").get<uint32_t>(), payload.at("d").get<uint32_t>(), payload.at("e").get<uint16_t>(), payload.at("f").get<uint32_t>() };
+        {
+            property.payload =
+                PropertyType04{
+                    payload.at("a").get<uint32_t>(),
+                    payload.at("b").get<uint32_t>(),
+                    payload.at("c").get<uint32_t>(),
+                    payload.at("d").get<uint32_t>(),
+                    payload.at("e").get<uint16_t>(),
+                    payload.at("f").get<uint32_t>()
+                };
+
             break;
+        }
+
         case 5:
-            property.payload = PropertyType05{ payload.at("a").get<uint32_t>(), payload.at("b").get<uint32_t>(), payload.at("c").get<uint32_t>(), payload.at("d").get<uint32_t>(), payload.at("e").get<uint32_t>(), payload.at("f").get<uint32_t>(), payload.at("g").get<uint32_t>() };
+        {
+            property.payload =
+                PropertyType05{
+                    payload.at("a").get<uint32_t>(),
+                    payload.at("b").get<uint32_t>(),
+                    payload.at("c").get<uint32_t>(),
+                    payload.at("d").get<uint32_t>(),
+                    payload.at("e").get<uint32_t>(),
+                    payload.at("f").get<uint32_t>(),
+                    payload.at("g").get<uint32_t>()
+                };
+
             break;
+        }
+
         case 6:
-            property.payload = PropertyType06{ payload.at("a").get<uint32_t>(), payload.at("b").get<uint32_t>(), payload.at("c").get<uint32_t>(), payload.at("d").get<uint32_t>(), payload.at("e").get<uint32_t>(), payload.at("f").get<uint32_t>(), payload.at("g").get<uint32_t>(), payload.at("h").get<uint16_t>(), payload.at("i").get<uint32_t>() };
+        {
+            property.payload =
+                PropertyType06{
+                    payload.at("a").get<uint32_t>(),
+                    payload.at("b").get<uint32_t>(),
+                    payload.at("c").get<uint32_t>(),
+                    payload.at("d").get<uint32_t>(),
+                    payload.at("e").get<uint32_t>(),
+                    payload.at("f").get<uint32_t>(),
+                    payload.at("g").get<uint32_t>(),
+                    payload.at("h").get<uint16_t>(),
+                    payload.at("i").get<uint32_t>()
+                };
+
             break;
+        }
+
         default:
-            throw std::runtime_error("Unknown property type: " + std::to_string(property.propType));
+            throw std::runtime_error(
+                "Unknown property type: " +
+                std::to_string(property.propType)
+            );
     }
 
     return property;
