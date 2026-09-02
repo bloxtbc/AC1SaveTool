@@ -2,7 +2,6 @@
 
 #include <stdexcept>
 #include <string>
-#include <variant>
 
 namespace ac1 {
 
@@ -29,11 +28,11 @@ void SaveWriter::writeObject(BinaryWriter& writer, const SaveGameObject& object)
 {
     writer.u32be(object.classID);
     writer.u32be(object.propertyCount);
-    writer.u32be(object.unknown);
-
-    for (const auto& property : object.properties) {
-        writeProperty(writer, property);
+    for (const auto& record : object.properties) {
+        writeObjectRefRecord(writer, record);
     }
+
+    writer.u32be(object.unknown1);
 
     for (const auto& metadata : object.pm) {
         writeMetadata(writer, metadata);
@@ -46,70 +45,18 @@ void SaveWriter::writeObject(BinaryWriter& writer, const SaveGameObject& object)
     }
 }
 
-void SaveWriter::writeProperty(BinaryWriter& writer, const Property& property)
+void SaveWriter::writeObjectRefRecord(BinaryWriter& writer, const ObjectRefRecord& record)
 {
-    writer.u8(property.propType);
-    writer.u32be(property.id);
-    writer.u16be(property.index);
+    writer.u32be(record.unknown);
+    writer.u8(record.objectCount);
 
-    switch (property.propType) {
-        case 1: {
-            const auto& payload = std::get<PropertyType01>(property.payload);
-            writer.u32be(payload.value);
-            break;
-        }
-        case 2: {
-            const auto& payload = std::get<PropertyType02>(property.payload);
-            writer.u32be(payload.refId);
-            writer.u16be(payload.refIndex);
-            writer.u32be(payload.flags);
-            break;
-        }
-        case 3: {
-            const auto& payload = std::get<PropertyType03>(property.payload);
-            writer.u32be(payload.unk1);
-            writer.u16be(payload.unk2);
-            writer.u32be(payload.refId);
-            writer.u16be(payload.refIndex);
-            writer.u32be(payload.flags);
-            break;
-        }
-        case 4: {
-            const auto& payload = std::get<PropertyType04>(property.payload);
-            writer.u32be(payload.refId);
-            writer.u32be(payload.b);
-            writer.u32be(payload.c);
-            writer.u32be(payload.d);
-            writer.u16be(payload.e);
-            writer.u32be(payload.f);
-            break;
-        }
-        case 5: {
-            const auto& payload = std::get<PropertyType05>(property.payload);
-            writer.u32be(payload.refId);
-            writer.u32be(payload.b);
-            writer.u32be(payload.c);
-            writer.u32be(payload.d);
-            writer.u32be(payload.e);
-            writer.u32be(payload.f);
-            writer.u32be(payload.g);
-            break;
-        }
-        case 6: {
-            const auto& payload = std::get<PropertyType06>(property.payload);
-            writer.u32be(payload.a);
-            writer.u32be(payload.b);
-            writer.u32be(payload.c);
-            writer.u32be(payload.d);
-            writer.u32be(payload.e);
-            writer.u32be(payload.f);
-            writer.u32be(payload.g);
-            writer.u16be(payload.h);
-            writer.u32be(payload.i);
-            break;
-        }
-        default:
-            throw std::runtime_error("Unknown property type: " + std::to_string(property.propType));
+    if (record.objectHandles.size() != record.objectCount) {
+        throw std::runtime_error("Object reference count mismatch");
+    }
+
+    for (const auto& handle : record.objectHandles) {
+        writer.u32be(handle.id);
+        writer.u16be(handle.subIndex);
     }
 }
 

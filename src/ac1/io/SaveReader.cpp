@@ -4,37 +4,21 @@
 
 namespace ac1 {
 
-Property SaveReader::readProperty(BinaryReader& reader)
+ObjectRefRecord SaveReader::readObjectRefRecord(BinaryReader& reader)
 {
-    Property property{};
-    property.propType = reader.u8();
-    property.id = reader.u32be();
-    property.index = reader.u16be();
+    ObjectRefRecord record{};
+    record.unknown = reader.u32be();
+    record.objectCount = reader.u8();
+    record.objectHandles.reserve(record.objectCount);
 
-    switch (property.propType) {
-        case 1:
-            property.payload = PropertyType01{ reader.u32be() };
-            break;
-        case 2:
-            property.payload = PropertyType02{ reader.u32be(), reader.u16be(), reader.u32be() };
-            break;
-        case 3:
-            property.payload = PropertyType03{ reader.u32be(), reader.u16be(), reader.u32be(), reader.u16be(), reader.u32be() };
-            break;
-        case 4:
-            property.payload = PropertyType04{ reader.u32be(), reader.u32be(), reader.u32be(), reader.u32be(), reader.u16be(), reader.u32be() };
-            break;
-        case 5:
-            property.payload = PropertyType05{ reader.u32be(), reader.u32be(), reader.u32be(), reader.u32be(), reader.u32be(), reader.u32be(), reader.u32be() };
-            break;
-        case 6:
-            property.payload = PropertyType06{ reader.u32be(), reader.u32be(), reader.u32be(), reader.u32be(), reader.u32be(), reader.u32be(), reader.u32be(), reader.u16be(), reader.u32be() };
-            break;
-        default:
-            throw std::runtime_error("Unknown property type: " + std::to_string(property.propType));
+    for (uint8_t i = 0; i < record.objectCount; ++i) {
+        record.objectHandles.push_back(ObjectHandle{
+            reader.u32be(),
+            reader.u16be()
+        });
     }
 
-    return property;
+    return record;
 }
 
 PropertyMetadata SaveReader::readMetadata(BinaryReader& reader)
@@ -150,15 +134,15 @@ SaveGameObject SaveReader::readObject(BinaryReader& reader)
     SaveGameObject object{};
     object.classID = reader.u32be();
     object.propertyCount = reader.u32be();
-    object.unknown = reader.u32be();
-
     object.properties.reserve(object.propertyCount);
     object.pm.reserve(object.propertyCount);
     object.values.reserve(object.propertyCount);
 
     for (uint32_t i = 0; i < object.propertyCount; ++i) {
-        object.properties.push_back(readProperty(reader));
+        object.properties.push_back(readObjectRefRecord(reader));
     }
+
+    object.unknown1 = reader.u32be();
 
     for (uint32_t i = 0; i < object.propertyCount; ++i) {
         object.pm.push_back(readMetadata(reader));

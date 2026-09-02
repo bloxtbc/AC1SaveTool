@@ -198,117 +198,26 @@ PropertyValue valueFromJson(const json& valueJson)
     return result;
 }
 
-Property propertyFromJson(const json& propertyJson)
+ObjectRefRecord objectRefRecordFromJson(const json& recordJson)
 {
-    Property property{};
+    ObjectRefRecord record{};
+    record.unknown = recordJson.at("unknown").get<uint32_t>();
+    record.objectCount = recordJson.at("objectCount").get<uint8_t>();
 
-    property.propType =
-        propertyJson.at("propType").get<uint8_t>();
-
-    property.id =
-        propertyJson.at("id").get<uint32_t>();
-
-    property.index =
-        propertyJson.at("index").get<uint16_t>();
-
-    const auto& payload =
-        propertyJson.at("payload");
-
-    switch (property.propType) {
-
-        case 1:
-        {
-            property.payload =
-                PropertyType01{
-                    payload.at("value").get<uint32_t>()
-                };
-
-            break;
-        }
-
-        case 2:
-        {
-            property.payload =
-                PropertyType02{
-                    propertyJson.at("refId").get<uint32_t>(),
-                    payload.at("refIndex").get<uint16_t>(),
-                    payload.at("flags").get<uint32_t>()
-                };
-
-            break;
-        }
-
-        case 3:
-        {
-            property.payload =
-                PropertyType03{
-                    payload.at("unk1").get<uint32_t>(),
-                    payload.at("unk2").get<uint16_t>(),
-                    propertyJson.at("refId").get<uint32_t>(),
-                    payload.at("refIndex").get<uint16_t>(),
-                    payload.at("flags").get<uint32_t>()
-                };
-
-            break;
-        }
-
-        case 4:
-        {
-            property.payload =
-                PropertyType04{
-                    propertyJson.at("refId").get<uint32_t>(),
-                    payload.at("b").get<uint32_t>(),
-                    payload.at("c").get<uint32_t>(),
-                    payload.at("d").get<uint32_t>(),
-                    payload.at("e").get<uint16_t>(),
-                    payload.at("f").get<uint32_t>()
-                };
-
-            break;
-        }
-
-        case 5:
-        {
-            property.payload =
-                PropertyType05{
-                    propertyJson.at("refId").get<uint32_t>(),
-                    payload.at("b").get<uint32_t>(),
-                    payload.at("c").get<uint32_t>(),
-                    payload.at("d").get<uint32_t>(),
-                    payload.at("e").get<uint32_t>(),
-                    payload.at("f").get<uint32_t>(),
-                    payload.at("g").get<uint32_t>()
-                };
-
-            break;
-        }
-
-        case 6:
-        {
-            property.payload =
-                PropertyType06{
-                    payload.at("a").get<uint32_t>(),
-                    payload.at("b").get<uint32_t>(),
-                    payload.at("c").get<uint32_t>(),
-                    payload.at("d").get<uint32_t>(),
-                    payload.at("e").get<uint32_t>(),
-                    payload.at("f").get<uint32_t>(),
-                    payload.at("g").get<uint32_t>(),
-                    payload.at("h").get<uint16_t>(),
-                    payload.at("i").get<uint32_t>()
-                };
-
-            break;
-        }
-
-        default:
-            throw std::runtime_error(
-                "Unknown property type: " +
-                std::to_string(property.propType)
-            );
+    const auto& handles = recordJson.at("objectHandles");
+    if (handles.size() != record.objectCount) {
+        throw std::runtime_error("Object handle count mismatch");
     }
 
-    return property;
+    record.objectHandles.reserve(record.objectCount);
+    for (const auto& handleJson : handles) {
+        record.objectHandles.push_back(ObjectHandle{
+            readHex32OrNumber(handleJson.at("id")),
+            handleJson.at("subIndex").get<uint16_t>()
+        });
+    }
+
+    return record;
 }
 
 PropertyMetadata metadataFromJson(const json& metadataJson)
@@ -324,7 +233,7 @@ SaveGameObject objectFromJson(const json& objectJson)
     SaveGameObject object{};
     object.classID = objectJson.at("classID").get<uint32_t>();
     object.propertyCount = objectJson.at("propertyCount").get<uint32_t>();
-    object.unknown = objectJson.at("unknown").get<uint32_t>();
+    object.unknown1 = objectJson.at("unknown1").get<uint32_t>();
     object.unknown2 = objectJson.at("unknown2").get<uint32_t>();
 
     const auto& properties = objectJson.at("properties");
@@ -346,7 +255,7 @@ SaveGameObject objectFromJson(const json& objectJson)
     object.values.reserve(object.propertyCount);
 
     for (const auto& property : properties) {
-        object.properties.push_back(propertyFromJson(property));
+        object.properties.push_back(objectRefRecordFromJson(property));
     }
     for (const auto& pm : metadata) {
         object.pm.push_back(metadataFromJson(pm));

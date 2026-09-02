@@ -16,7 +16,7 @@ private:
     SaveGame readSave(BinaryReader& reader);
     SaveGameObject readObject(BinaryReader& reader);
 
-    Property readProperty(BinaryReader& reader);
+    ObjectRefRecord readObjectRefRecord(BinaryReader& reader);
     PropertyMetadata readMetadata(BinaryReader& reader);
 
     PropertyValue readValue(

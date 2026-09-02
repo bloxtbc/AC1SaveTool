@@ -16,7 +16,7 @@ private:
     void writeSave(BinaryWriter& writer, const SaveGame& save);
     void writeObject(BinaryWriter& writer, const SaveGameObject& object);
 
-    void writeProperty(BinaryWriter& writer, const Property& property);
+    void writeObjectRefRecord(BinaryWriter& writer, const ObjectRefRecord& record);
     void writeMetadata(BinaryWriter& writer, const PropertyMetadata& metadata);
 
     void writeValue(

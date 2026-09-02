@@ -149,42 +149,32 @@ inline void addHash(
     }
 }
 
-void addValueHash(
-    json& result,
-    const Property& property,
-    const HashDatabase* hashes
-)
+
+void addObjectRefHash(json& result, const ObjectRefRecord& record,const HashDatabase* hashes) 
 {
     if (!hashes) {
         return;
     }
 
-    addHash(result, "propertyId", property.id, hashes,false);
-
-     std::visit(
-        [&result, hashes](const auto& payload) {
-            using T = std::decay_t<decltype(payload)>;
-
-            if constexpr (
-                std::is_same_v<T, PropertyType02> ||
-                std::is_same_v<T, PropertyType03> ||
-                std::is_same_v<T, PropertyType04> ||
-                std::is_same_v<T, PropertyType05>
-            ) {
-                addHash(result,"refHash",payload.refId,hashes,false);
-            }
-        },
-        property.payload
-    );
+    for (std::size_t i = 0; i < record.objectHandles.size(); ++i) {
+        std::string prefix = "objHandles[" + std::to_string(i) + "]";
+        const auto& handle = record.objectHandles[i];
+        std::string idKey = prefix + ".id";
+        addHash(result, idKey.c_str(), handle.id, hashes);
+        if (handle.subIndex != 65535) {
+            std::string subIndexKey = prefix + ".subIndex";
+            result[subIndexKey] = handle.subIndex;
+        }
+    }
 }
 
-json valueToJson(const PropertyValue& value, const Property* property, const HashDatabase* hashes)
+json valueToJson(const PropertyValue& value, const ObjectRefRecord* objRefRecord, const HashDatabase* hashes)
 {
     json result;
     result["type"] = serializerFieldTypeNameOrThrow(value.type);
 
-    if (property) {
-        addValueHash(result, *property, hashes);
+    if (objRefRecord) {
+        addObjectRefHash(result, *objRefRecord, hashes);
     }
 
     switch (value.type) {
@@ -253,56 +243,20 @@ json valueToJson(const PropertyValue& value, const Property* property, const Has
     return result;
 }
 
-json propertyToJson(const Property& property, const HashDatabase* hashes)
+json objectRefRecordToJson(const ObjectRefRecord& record, const HashDatabase* hashes)
 {
     json result;
-    result["propType"] = property.propType;
-    addHash(result, "id", property.id, hashes);
-    result["index"] = property.index;
+    result["unknown"] = record.unknown;
+    result["objectCount"] = record.objectCount;
 
-    std::visit([&result, hashes](const auto& payload) {
-        using T = std::decay_t<decltype(payload)>;
-        json data;
-        if constexpr (std::is_same_v<T, PropertyType01>) {
-            data["value"] = payload.value;
-        } else if constexpr (std::is_same_v<T, PropertyType02>) {
-            addHash(result, "refId", payload.refId, hashes);
-            data["refIndex"] = payload.refIndex;
-            data["flags"] = payload.flags;
-        } else if constexpr (std::is_same_v<T, PropertyType03>) {
-            data["unk1"] = payload.unk1;
-            data["unk2"] = payload.unk2;
-            addHash(result, "refId", payload.refId, hashes);
-            data["refIndex"] = payload.refIndex;
-            data["flags"] = payload.flags;
-        } else if constexpr (std::is_same_v<T, PropertyType04>) {
-            addHash(result, "refId", payload.refId, hashes);
-            data["b"] = payload.b;
-            data["c"] = payload.c;
-            data["d"] = payload.d;
-            data["e"] = payload.e;
-            data["f"] = payload.f;
-        } else if constexpr (std::is_same_v<T, PropertyType05>) {
-            addHash(result, "refId", payload.refId, hashes);
-            data["b"] = payload.b;
-            data["c"] = payload.c;
-            data["d"] = payload.d;
-            data["e"] = payload.e;
-            data["f"] = payload.f;
-            data["g"] = payload.g;
-        } else if constexpr (std::is_same_v<T, PropertyType06>) {
-            data["a"] = payload.a;
-            data["b"] = payload.b;
-            data["c"] = payload.c;
-            data["d"] = payload.d;
-            data["e"] = payload.e;
-            data["f"] = payload.f;
-            data["g"] = payload.g;
-            data["h"] = payload.h;
-            data["i"] = payload.i;
-        }
-        result["payload"] = data;
-    }, property.payload);
+    json handles = json::array();
+    for (const auto& handle : record.objectHandles) {
+        json handleJson;
+        addHash(handleJson, "id", handle.id, hashes);
+        handleJson["subIndex"] = handle.subIndex;
+        handles.push_back(std::move(handleJson));
+    }
+    result["objectHandles"] = std::move(handles);
 
     return result;
 }
@@ -336,12 +290,12 @@ std::string SaveJsonExporter::exportSave(
         objectJson["index"] = i;
         objectJson["classID"] = object.classID;
         objectJson["propertyCount"] = object.propertyCount;
-        objectJson["unknown"] = object.unknown;
+        objectJson["unknown1"] = object.unknown1;
         objectJson["unknown2"] = object.unknown2;
 
         json properties = json::array();
         for (const auto& property : object.properties) {
-            properties.push_back(propertyToJson(property, hashes));
+            properties.push_back(objectRefRecordToJson(property, hashes));
         }
         objectJson["properties"] = properties;
 
@@ -356,16 +310,16 @@ std::string SaveJsonExporter::exportSave(
         for (std::size_t i = 0; i < object.values.size(); ++i) {
             const auto& value = object.values[i];
 
-            const Property* property = nullptr;
+            const ObjectRefRecord* objRefRecord = nullptr;
 
             if (i < object.properties.size()) {
-                property = &object.properties[i];
+                objRefRecord = &object.properties[i];
             }
 
             values.push_back(
                 valueToJson(
                     value,
-                    property,
+                    objRefRecord,
                     hashes
                 )
             );
