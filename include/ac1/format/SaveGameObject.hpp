@@ -11,14 +11,14 @@ namespace ac1 {
 
 struct SaveGameObject {
     uint32_t classID;
-    uint32_t propertyCount;
 
+    uint32_t propertyCount;
     std::vector<ObjectRefRecord> properties;
-    uint32_t unknown1;
+
+    uint32_t metadataCount;
     std::vector<PropertyMetadata> pm;
 
     uint32_t unknown2;
-
     std::vector<PropertyValue> values;
 };
 

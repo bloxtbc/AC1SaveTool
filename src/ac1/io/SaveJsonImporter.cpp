@@ -233,7 +233,7 @@ SaveGameObject objectFromJson(const json& objectJson)
     SaveGameObject object{};
     object.classID = objectJson.at("classID").get<uint32_t>();
     object.propertyCount = objectJson.at("propertyCount").get<uint32_t>();
-    object.unknown1 = objectJson.at("unknown1").get<uint32_t>();
+    object.metadataCount = objectJson.at("metadataCount").get<uint32_t>();
     object.unknown2 = objectJson.at("unknown2").get<uint32_t>();
 
     const auto& properties = objectJson.at("properties");
@@ -243,7 +243,7 @@ SaveGameObject objectFromJson(const json& objectJson)
     if (properties.size() != object.propertyCount) {
         throw std::runtime_error("Property count mismatch");
     }
-    if (metadata.size() != object.propertyCount) {
+    if (metadata.size() != object.metadataCount) {
         throw std::runtime_error("Metadata count mismatch");
     }
     if (values.size() != object.propertyCount) {
@@ -251,7 +251,7 @@ SaveGameObject objectFromJson(const json& objectJson)
     }
 
     object.properties.reserve(object.propertyCount);
-    object.pm.reserve(object.propertyCount);
+    object.pm.reserve(object.metadataCount);
     object.values.reserve(object.propertyCount);
 
     for (const auto& property : properties) {

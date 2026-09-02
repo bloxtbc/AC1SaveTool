@@ -133,24 +133,22 @@ SaveGameObject SaveReader::readObject(BinaryReader& reader)
 {
     SaveGameObject object{};
     object.classID = reader.u32be();
+
     object.propertyCount = reader.u32be();
     object.properties.reserve(object.propertyCount);
-    object.pm.reserve(object.propertyCount);
-    object.values.reserve(object.propertyCount);
-
     for (uint32_t i = 0; i < object.propertyCount; ++i) {
         object.properties.push_back(readObjectRefRecord(reader));
     }
-
-    object.unknown1 = reader.u32be();
-
-    for (uint32_t i = 0; i < object.propertyCount; ++i) {
+    
+    object.metadataCount = reader.u32be();
+    object.pm.reserve(object.metadataCount);
+    for (uint32_t i = 0; i < object.metadataCount; ++i) {
         object.pm.push_back(readMetadata(reader));
     }
 
     object.unknown2 = reader.u32be();
-
-    for (uint32_t i = 0; i < object.propertyCount; ++i) {
+    object.values.reserve(object.metadataCount);
+    for (uint32_t i = 0; i < object.metadataCount; ++i) {
         object.values.push_back(readValue(reader, object.pm[i].type()));
     }
 

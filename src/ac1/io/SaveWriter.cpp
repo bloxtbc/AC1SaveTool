@@ -32,7 +32,7 @@ void SaveWriter::writeObject(BinaryWriter& writer, const SaveGameObject& object)
         writeObjectRefRecord(writer, record);
     }
 
-    writer.u32be(object.unknown1);
+    writer.u32be(object.metadataCount);
 
     for (const auto& metadata : object.pm) {
         writeMetadata(writer, metadata);

@@ -290,7 +290,7 @@ std::string SaveJsonExporter::exportSave(
         objectJson["index"] = i;
         objectJson["classID"] = object.classID;
         objectJson["propertyCount"] = object.propertyCount;
-        objectJson["unknown1"] = object.unknown1;
+        objectJson["metadataCount"] = object.metadataCount;
         objectJson["unknown2"] = object.unknown2;
 
         json properties = json::array();
