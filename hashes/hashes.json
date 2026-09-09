@@ -1,254 +1,4311 @@
 {
- "59534803": [
-  "CityMarker"
- ],
- "182352896": [
-  "SpawnMode"
- ],
- "245999962": [
-  "MountIsChosen"
- ],
- "356220115": [
-  "AltairRankSaved"
- ],
- "418166524": [
-  "PersistedIDs"
- ],
- "440541947": [
-  "ResetMonitor"
- ],
- "494490051": [
-  "CitiesInKingdom"
- ],
- "529056539": [
-  "Options"
- ],
- "550671715": [
-  "ShowCtrlScheme"
- ],
- "561800778": [
-  "DaggerShoulderCount"
- ],
- "588182160": [
-  "MountIndex"
- ],
- "782802969": [
-  "Monitor"
- ],
- "822170364": [
-  "Accomplishments"
- ],
- "864635854": [
-  "HorseMonitorData"
- ],
- "955405642": [
-  "MainDaggerBeltCount"
- ],
- "988155343": [
-  "SelectedWeapon"
- ],
- "1027654762": [
-  "Vibration"
- ],
- "1142451046": [
-  "Count"
- ],
- "1170604816": [
-  "FreeMissionInformerCount"
- ],
- "1184746767": [
-  "AssassinMatrix"
- ],
- "1207356937": [
-  "MobileSpawnerPos"
- ],
- "1275278747": [
-  "DaggerBeltCount"
- ],
- "1361138523": [
-  "SetByPlayerMarker"
- ],
- "1496786106": [
-  "CheckPointOnlySemaphore"
- ],
- "1501289652": [
-  "AlwaysSaveWorldID"
- ],
- "1534400570": [
-  "InvertXLook"
- ],
- "1551827799": [
-  "AssassinSaved"
- ],
- "1573852237": [
-  "FreeMissionScholarsCount"
- ],
- "1575644396": [
-  "SFXVolume"
- ],
- "1649606143": [
-  "State"
- ],
- "1669243737": [
-  "XLookSensitivity"
- ],
- "1670108668": [
-  "IsResolved"
- ],
- "1712664970": [
-  "InvertYLook"
- ],
- "1849811038": [
-  "NothingIsTrueEverythingIsPermitted"
- ],
- "1922168126": [
-  "MarkerType"
- ],
- "1958527870": [
-  "AssassinOnMount"
- ],
- "2001406352": [
-  "MissionReplay"
- ],
- "2005069724": [
-  "UsedEvents"
- ],
- "2096795148": [
-  "MarkerPosition"
- ],
- "2105823925": [
-  "MobileSpawnerDir"
- ],
- "2113130176": [
-  "ShowBlood"
- ],
- "2178661708": [
-  "TotalNumSynchBlocks"
- ],
- "2181900433": [
-  "HoldToFocus"
- ],
- "2379497903": [
-  "Configs"
- ],
- "2385831596": [
-  "Markers"
- ],
- "2396801049": [
-  "MainSaveWorldID"
- ],
- "2407447650": [
-  "MapWorldInfo"
- ],
- "2465949767": [
-  "NoSaveSemaphore"
- ],
- "2489875330": [
-  "FreeMissionVigilantesCount"
- ],
- "2499365691": [
-  "GlobalTolerance"
- ],
- "2519455027": [
-  "Brightness"
- ],
- "2702571053": [
-  "Components"
- ],
- "2737467230": [
-  "UnlockedBlocksCount"
- ],
- "2747163608": [
-  "VoiceVolume"
- ],
- "2785163220": [
-  "DaggerLegCount"
- ],
- "2797770677": [
-  "CancelMonitor"
- ],
- "2867239103": [
-  "ToleranceSaved"
- ],
- "2871065487": [
-  "OtherMonitors"
- ],
- "2879431345": [
-  "NumSynchBlocks"
- ],
- "2911639119": [
-  "MainDaggerShoulderCount"
- ],
- "2916176588": [
-  "OutMonitor"
- ],
- "2969371692": [
-  "FogCells"
- ],
- "3068249190": [
-  "OptionalObjectivesCount"
- ],
- "3125686489": [
-  "IsAllUnfogged"
- ],
- "3144687493": [
-  "ShowGPS"
- ],
- "3155981222": [
-  "CurrentSaveWorldID"
- ],
- "3161216672": [
-  "IsKnown"
- ],
- "3197466611": [
-  "AltairMarker"
- ],
- "3246730187": [
-  "MountIsInWorld"
- ],
- "3440784072": [
-  "YLookSensitivity"
- ],
- "3494805540": [
-  "AltairCurrentRank"
- ],
- "3575369835": [
-  "MusicVolume"
- ],
- "3584634421": [
-  "ShowWeaponIcon"
- ],
- "3622219230": [
-  "CurrentMemoryBlock"
- ],
- "3664481400": [
-  "DefaultCompassMarker"
- ],
- "3678460294": [
-  "AltairNextRank"
- ],
- "3734200949": [
-  "xDE936275"
- ],
- "3776449165": [
-  "TextId"
- ],
- "3801967644": [
-  "InMonitor"
- ],
- "3847088039": [
-  "HighTolerance"
- ],
- "3870325847": [
-  "MainDaggerLegCount"
- ],
- "3872379813": [
-  "AutomaticMarkers"
- ],
- "3990271243": [
-  "ShowSyncBar"
- ],
- "4272727674": [
-  "OtherMonitor"
- ]
+  "propHashes": {
+    "59534803": [
+      "CityMarker"
+    ],
+    "182352896": [
+      "SpawnMode"
+    ],
+    "245999962": [
+      "MountIsChosen"
+    ],
+    "356220115": [
+      "AltairRankSaved"
+    ],
+    "418166524": [
+      "PersistedIDs"
+    ],
+    "440541947": [
+      "ResetMonitor"
+    ],
+    "494490051": [
+      "CitiesInKingdom"
+    ],
+    "529056539": [
+      "Options"
+    ],
+    "550671715": [
+      "ShowCtrlScheme"
+    ],
+    "561800778": [
+      "DaggerShoulderCount"
+    ],
+    "588182160": [
+      "MountIndex"
+    ],
+    "782802969": [
+      "Monitor"
+    ],
+    "822170364": [
+      "Accomplishments"
+    ],
+    "864635854": [
+      "HorseMonitorData"
+    ],
+    "955405642": [
+      "MainDaggerBeltCount"
+    ],
+    "988155343": [
+      "SelectedWeapon"
+    ],
+    "1027654762": [
+      "Vibration"
+    ],
+    "1142451046": [
+      "Count"
+    ],
+    "1170604816": [
+      "FreeMissionInformerCount"
+    ],
+    "1184746767": [
+      "AssassinMatrix"
+    ],
+    "1207356937": [
+      "MobileSpawnerPos"
+    ],
+    "1275278747": [
+      "DaggerBeltCount"
+    ],
+    "1361138523": [
+      "SetByPlayerMarker"
+    ],
+    "1496786106": [
+      "CheckPointOnlySemaphore"
+    ],
+    "1501289652": [
+      "AlwaysSaveWorldID"
+    ],
+    "1534400570": [
+      "InvertXLook"
+    ],
+    "1551827799": [
+      "AssassinSaved"
+    ],
+    "1573852237": [
+      "FreeMissionScholarsCount"
+    ],
+    "1575644396": [
+      "SFXVolume"
+    ],
+    "1649606143": [
+      "State"
+    ],
+    "1669243737": [
+      "XLookSensitivity"
+    ],
+    "1670108668": [
+      "IsResolved"
+    ],
+    "1712664970": [
+      "InvertYLook"
+    ],
+    "1849811038": [
+      "NothingIsTrueEverythingIsPermitted"
+    ],
+    "1922168126": [
+      "MarkerType"
+    ],
+    "1958527870": [
+      "AssassinOnMount"
+    ],
+    "2001406352": [
+      "MissionReplay"
+    ],
+    "2005069724": [
+      "UsedEvents"
+    ],
+    "2096795148": [
+      "MarkerPosition"
+    ],
+    "2105823925": [
+      "MobileSpawnerDir"
+    ],
+    "2113130176": [
+      "ShowBlood"
+    ],
+    "2178661708": [
+      "TotalNumSynchBlocks"
+    ],
+    "2181900433": [
+      "HoldToFocus"
+    ],
+    "2379497903": [
+      "Configs"
+    ],
+    "2385831596": [
+      "Markers"
+    ],
+    "2396801049": [
+      "MainSaveWorldID"
+    ],
+    "2407447650": [
+      "MapWorldInfo"
+    ],
+    "2465949767": [
+      "NoSaveSemaphore"
+    ],
+    "2489875330": [
+      "FreeMissionVigilantesCount"
+    ],
+    "2499365691": [
+      "GlobalTolerance"
+    ],
+    "2519455027": [
+      "Brightness"
+    ],
+    "2702571053": [
+      "Components"
+    ],
+    "2737467230": [
+      "UnlockedBlocksCount"
+    ],
+    "2747163608": [
+      "VoiceVolume"
+    ],
+    "2785163220": [
+      "DaggerLegCount"
+    ],
+    "2797770677": [
+      "CancelMonitor"
+    ],
+    "2867239103": [
+      "ToleranceSaved"
+    ],
+    "2871065487": [
+      "OtherMonitors"
+    ],
+    "2879431345": [
+      "NumSynchBlocks"
+    ],
+    "2911639119": [
+      "MainDaggerShoulderCount"
+    ],
+    "2916176588": [
+      "OutMonitor"
+    ],
+    "2969371692": [
+      "FogCells"
+    ],
+    "3068249190": [
+      "OptionalObjectivesCount"
+    ],
+    "3125686489": [
+      "IsAllUnfogged"
+    ],
+    "3144687493": [
+      "ShowGPS"
+    ],
+    "3155981222": [
+      "CurrentSaveWorldID"
+    ],
+    "3161216672": [
+      "IsKnown"
+    ],
+    "3197466611": [
+      "AltairMarker"
+    ],
+    "3246730187": [
+      "MountIsInWorld"
+    ],
+    "3440784072": [
+      "YLookSensitivity"
+    ],
+    "3494805540": [
+      "AltairCurrentRank"
+    ],
+    "3575369835": [
+      "MusicVolume"
+    ],
+    "3584634421": [
+      "ShowWeaponIcon"
+    ],
+    "3622219230": [
+      "CurrentMemoryBlock"
+    ],
+    "3664481400": [
+      "DefaultCompassMarker"
+    ],
+    "3678460294": [
+      "AltairNextRank"
+    ],
+    "3734200949": [
+      "xDE936275"
+    ],
+    "3776449165": [
+      "TextId"
+    ],
+    "3801967644": [
+      "InMonitor"
+    ],
+    "3847088039": [
+      "HighTolerance"
+    ],
+    "3870325847": [
+      "MainDaggerLegCount"
+    ],
+    "3872379813": [
+      "AutomaticMarkers"
+    ],
+    "3990271243": [
+      "ShowSyncBar"
+    ],
+    "4272727674": [
+      "OtherMonitor"
+    ],
+    "882350721": [
+      "MissionStatus"
+    ],
+    "1379586241": [
+      "IsCompleted"
+    ],
+    "1842287097": [
+      "Unknown (mission)"
+    ]
+  },
+  "classNames": {
+    "1005212782": {
+      "Names": [
+        "M02_SolomonTemple"
+      ],
+      "Category": "mission"
+    },
+    "1040056258": {
+      "Names": [
+        "M05_HorseTutorial"
+      ],
+      "Category": "mission"
+    },
+    "1045371048": {
+      "Names": [
+        "M06_MasyafUnderAttack"
+      ],
+      "Category": "mission"
+    },
+    "1165355488": {
+      "Names": [
+        "Close_Tower_Trap"
+      ],
+      "Category": "mission"
+    },
+    "2927099110": {
+      "Names": [
+        "Unload MB1"
+      ],
+      "Category": "mission"
+    },
+    "3003": {
+      "Names": [
+        "PlayerSaveData (global save state - holds CurrentSaveWorldID etc.)"
+      ],
+      "Category": "save"
+    },
+    "3616374283": {
+      "Names": [
+        "00_Elipse&Save_MUA"
+      ],
+      "Category": "mission"
+    },
+    "1040056261": {
+      "Names": [
+        "01_EnterMasyaf"
+      ],
+      "Category": "mission"
+    },
+    "1181353001": {
+      "Names": [
+        "01_RaufPanic"
+      ],
+      "Category": "mission"
+    },
+    "2797450946": {
+      "Names": [
+        "01_Sinan_Breifing"
+      ],
+      "Category": "mission"
+    },
+    "1304473665": {
+      "Names": [
+        "02_Abbas"
+      ],
+      "Category": "mission"
+    },
+    "1180844313": {
+      "Names": [
+        "02_AssassinsRetreat"
+      ],
+      "Category": "mission"
+    },
+    "1519634205": {
+      "Names": [
+        "02_InvestigationAdvice"
+      ],
+      "Category": "mission"
+    },
+    "2797450943": {
+      "Names": [
+        "03_EavesdroppingMission"
+      ],
+      "Category": "mission"
+    },
+    "1102381365": {
+      "Names": [
+        "03_LOF_RaufMS"
+      ],
+      "Category": "mission"
+    },
+    "1147913948": {
+      "Names": [
+        "03_ReportToSinan"
+      ],
+      "Category": "mission"
+    },
+    "1498504117": {
+      "Names": [
+        "04_LOF_ClimbTower"
+      ],
+      "Category": "mission"
+    },
+    "2797450945": {
+      "Names": [
+        "04_PickpocketMission"
+      ],
+      "Category": "mission"
+    },
+    "2797450944": {
+      "Names": [
+        "05_InterrogationMission"
+      ],
+      "Category": "mission"
+    },
+    "3453309830": {
+      "Names": [
+        "05_LOF_Must-See&Tuto"
+      ],
+      "Category": "mission"
+    },
+    "1045371076": {
+      "Names": [
+        "06_LogTrap"
+      ],
+      "Category": "mission"
+    },
+    "3084801128": {
+      "Names": [
+        "07_RankDown"
+      ],
+      "Category": "mission"
+    },
+    "586830382": {
+      "Names": [
+        "1st Map Marker - Get Ark"
+      ],
+      "Category": "mission"
+    },
+    "586830383": {
+      "Names": [
+        "2nd Map Marker - Go to Sinan"
+      ],
+      "Category": "mission"
+    },
+    "1304473667": {
+      "Names": [
+        "Abbas_Loop"
+      ],
+      "Category": "mission"
+    },
+    "1330022082": {
+      "Names": [
+        "Acre Intro Mastershot"
+      ],
+      "Category": "mission"
+    },
+    "1116882559": {
+      "Names": [
+        "Acre MB3 OMB"
+      ],
+      "Category": "mission"
+    },
+    "58447220": {
+      "Names": [
+        "Acre_01"
+      ],
+      "Category": "mission"
+    },
+    "58447221": {
+      "Names": [
+        "Acre_02"
+      ],
+      "Category": "mission"
+    },
+    "58447222": {
+      "Names": [
+        "Acre_03"
+      ],
+      "Category": "mission"
+    },
+    "1469615632": {
+      "Names": [
+        "Acre_Bureau_Leader_No_Mission"
+      ],
+      "Category": "mission"
+    },
+    "415098416": {
+      "Names": [
+        "ActionView"
+      ],
+      "Category": "mission"
+    },
+    "2487054822": {
+      "Names": [
+        "ActivateMasyafFlags"
+      ],
+      "Category": "mission"
+    },
+    "3369434443": {
+      "Names": [
+        "ActivateTeleportChoice"
+      ],
+      "Category": "mission"
+    },
+    "3369434450": {
+      "Names": [
+        "ActivateTeleportChoice_Acre"
+      ],
+      "Category": "mission"
+    },
+    "3369434448": {
+      "Names": [
+        "ActivateTeleportChoice_Damascus"
+      ],
+      "Category": "mission"
+    },
+    "3369434449": {
+      "Names": [
+        "ActivateTeleportChoice_Jerusalem"
+      ],
+      "Category": "mission"
+    },
+    "3369434444": {
+      "Names": [
+        "ActivateTeleportChoice_Masyaf"
+      ],
+      "Category": "mission"
+    },
+    "2916042500": {
+      "Names": [
+        "AdvacnceFightRemoveAbilities"
+      ],
+      "Category": "mission"
+    },
+    "3014305743": {
+      "Names": [
+        "AdvancedFightTutorial_MasterScene"
+      ],
+      "Category": "mission"
+    },
+    "2855883905": {
+      "Names": [
+        "AfterRetryAndAfterMM"
+      ],
+      "Category": "mission"
+    },
+    "2590315480": {
+      "Names": [
+        "Al Mualim - Garnier Debrief"
+      ],
+      "Category": "mission"
+    },
+    "2590315478": {
+      "Names": [
+        "Al Mualim - MB03 briefing"
+      ],
+      "Category": "mission"
+    },
+    "2927099584": {
+      "Names": [
+        "Al Mualim - MB04 Briefing"
+      ],
+      "Category": "mission"
+    },
+    "2927099587": {
+      "Names": [
+        "Al Mualim - Montferrat Debrief A"
+      ],
+      "Category": "mission"
+    },
+    "3119386427": {
+      "Names": [
+        "Al Mualim - Montferrat Debrief B"
+      ],
+      "Category": "mission"
+    },
+    "2927099675": {
+      "Names": [
+        "Al-Mu- MB05 Briefing"
+      ],
+      "Category": "mission"
+    },
+    "2927099590": {
+      "Names": [
+        "Al-Mualim - Emir Debrief A"
+      ],
+      "Category": "mission"
+    },
+    "3119386430": {
+      "Names": [
+        "Al-Mualim - Emir Debrief B"
+      ],
+      "Category": "mission"
+    },
+    "2927099735": {
+      "Names": [
+        "Al-Mualim - MB06 Briefing"
+      ],
+      "Category": "mission"
+    },
+    "2927099678": {
+      "Names": [
+        "Al-Mualim - Sibrand Debrief"
+      ],
+      "Category": "mission"
+    },
+    "2590315479": {
+      "Names": [
+        "Al-Mualim - Talal Debrief"
+      ],
+      "Category": "mission"
+    },
+    "2927099593": {
+      "Names": [
+        "Al-Mualim - Vizier Debrief A"
+      ],
+      "Category": "mission"
+    },
+    "3119386433": {
+      "Names": [
+        "Al-Mualim - Vizier Debrief B"
+      ],
+      "Category": "mission"
+    },
+    "3137256715": {
+      "Names": [
+        "Al-Mualim 1"
+      ],
+      "Category": "mission"
+    },
+    "2927099681": {
+      "Names": [
+        "Al-Mualim- Jubair Debrief"
+      ],
+      "Category": "mission"
+    },
+    "3217504208": {
+      "Names": [
+        "Alchemist Stay Dead"
+      ],
+      "Category": "mission"
+    },
+    "2931000745": {
+      "Names": [
+        "Altair fails Robert Assassination"
+      ],
+      "Category": "mission"
+    },
+    "3373232974": {
+      "Names": [
+        "AltairFailsAssassination"
+      ],
+      "Category": "mission"
+    },
+    "727423003": {
+      "Names": [
+        "Arsuf Marker"
+      ],
+      "Category": "mission"
+    },
+    "116271080": {
+      "Names": [
+        "Arsuf_01"
+      ],
+      "Category": "mission"
+    },
+    "3100782922": {
+      "Names": [
+        "Arsuf_Out_Of_Bound"
+      ],
+      "Category": "mission"
+    },
+    "1881346978": {
+      "Names": [
+        "Arsuf_Save_point_001"
+      ],
+      "Category": "mission"
+    },
+    "102823220": {
+      "Names": [
+        "Arsuf_Save_point_002"
+      ],
+      "Category": "mission"
+    },
+    "1881347033": {
+      "Names": [
+        "Arsuf_Save_point_003"
+      ],
+      "Category": "mission"
+    },
+    "102823261": {
+      "Names": [
+        "Arsuf_Save_point_004"
+      ],
+      "Category": "mission"
+    },
+    "2931000743": {
+      "Names": [
+        "Assassination Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "1448386234": {
+      "Names": [
+        "AssassinationTuto Presentation Cam"
+      ],
+      "Category": "mission"
+    },
+    "2931000744": {
+      "Names": [
+        "Assassins see Ark and Robert"
+      ],
+      "Category": "mission"
+    },
+    "627692322": {
+      "Names": [
+        "AssassinsCreed"
+      ],
+      "Category": "mission"
+    },
+    "586832507": {
+      "Names": [
+        "BlendedGreen"
+      ],
+      "Category": "mission"
+    },
+    "398316786": {
+      "Names": [
+        "BlendingBlue"
+      ],
+      "Category": "mission"
+    },
+    "1565350251": {
+      "Names": [
+        "Block_Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "415098417": {
+      "Names": [
+        "BureauClosed"
+      ],
+      "Category": "mission"
+    },
+    "882333070": {
+      "Names": [
+        "Bureau_Initial"
+      ],
+      "Category": "mission"
+    },
+    "882333074": {
+      "Names": [
+        "Bureau_PostMM"
+      ],
+      "Category": "mission"
+    },
+    "882333071": {
+      "Names": [
+        "Bureau_PreMM"
+      ],
+      "Category": "mission"
+    },
+    "1767662539": {
+      "Names": [
+        "Bureau_WhileMM"
+      ],
+      "Category": "mission"
+    },
+    "1554136056": {
+      "Names": [
+        "CameraClimb"
+      ],
+      "Category": "mission"
+    },
+    "2311731110": {
+      "Names": [
+        "CloseMasyafDoors"
+      ],
+      "Category": "mission"
+    },
+    "157498761": {
+      "Names": [
+        "Clue1_Eavesdropping"
+      ],
+      "Category": "mission"
+    },
+    "3506289662": {
+      "Names": [
+        "Clue2_Bedroom_Door_Code"
+      ],
+      "Category": "mission"
+    },
+    "3869520215": {
+      "Names": [
+        "Clue3_Pickpocket_Vidic"
+      ],
+      "Category": "mission"
+    },
+    "1770135655": {
+      "Names": [
+        "Clue4_Pickpocket_Lucy"
+      ],
+      "Category": "mission"
+    },
+    "1934704658": {
+      "Names": [
+        "Clue5_Conference_Door_Code"
+      ],
+      "Category": "mission"
+    },
+    "1102396239": {
+      "Names": [
+        "Contain Player in Kingdom"
+      ],
+      "Category": "mission"
+    },
+    "1074881164": {
+      "Names": [
+        "Contain Player in Masyaf"
+      ],
+      "Category": "mission"
+    },
+    "1074881165": {
+      "Names": [
+        "Contain Player out of Fortress"
+      ],
+      "Category": "mission"
+    },
+    "285248147": {
+      "Names": [
+        "ContextTuto_ActionView"
+      ],
+      "Category": "mission"
+    },
+    "2093051312": {
+      "Names": [
+        "ContextTuto_AssassinationMission"
+      ],
+      "Category": "mission"
+    },
+    "2093051239": {
+      "Names": [
+        "ContextTuto_AssassinationMission_Emir"
+      ],
+      "Category": "mission"
+    },
+    "466424829": {
+      "Names": [
+        "ContextTuto_AssassinationMission_Garnier"
+      ],
+      "Category": "mission"
+    },
+    "2093051311": {
+      "Names": [
+        "ContextTuto_AssassinationMission_Jubair"
+      ],
+      "Category": "mission"
+    },
+    "2093051254": {
+      "Names": [
+        "ContextTuto_AssassinationMission_Maria"
+      ],
+      "Category": "mission"
+    },
+    "2093050103": {
+      "Names": [
+        "ContextTuto_AssassinationMission_Montferrat"
+      ],
+      "Category": "mission"
+    },
+    "2093051223": {
+      "Names": [
+        "ContextTuto_AssassinationMission_Sibrand"
+      ],
+      "Category": "mission"
+    },
+    "466424846": {
+      "Names": [
+        "ContextTuto_AssassinationMission_Talal"
+      ],
+      "Category": "mission"
+    },
+    "466424812": {
+      "Names": [
+        "ContextTuto_AssassinationMission_Tamir"
+      ],
+      "Category": "mission"
+    },
+    "2093051297": {
+      "Names": [
+        "ContextTuto_AssassinationMission_Vizier"
+      ],
+      "Category": "mission"
+    },
+    "2889396528": {
+      "Names": [
+        "ContextTuto_BlendHorse"
+      ],
+      "Category": "mission"
+    },
+    "285248150": {
+      "Names": [
+        "ContextTuto_BlendedGreen"
+      ],
+      "Category": "mission"
+    },
+    "285248151": {
+      "Names": [
+        "ContextTuto_BlendingBlue"
+      ],
+      "Category": "mission"
+    },
+    "285248152": {
+      "Names": [
+        "ContextTuto_Block"
+      ],
+      "Category": "mission"
+    },
+    "285248153": {
+      "Names": [
+        "ContextTuto_BureauClosed"
+      ],
+      "Category": "mission"
+    },
+    "285248148": {
+      "Names": [
+        "ContextTuto_CoolDownYellow"
+      ],
+      "Category": "mission"
+    },
+    "285248154": {
+      "Names": [
+        "ContextTuto_CriticalState"
+      ],
+      "Category": "mission"
+    },
+    "285248155": {
+      "Names": [
+        "ContextTuto_DaggerPickpocket"
+      ],
+      "Category": "mission"
+    },
+    "285248156": {
+      "Names": [
+        "ContextTuto_FastAttack"
+      ],
+      "Category": "mission"
+    },
+    "285248157": {
+      "Names": [
+        "ContextTuto_FightingOnHorse"
+      ],
+      "Category": "mission"
+    },
+    "285248158": {
+      "Names": [
+        "ContextTuto_HighLowProfileCombat"
+      ],
+      "Category": "mission"
+    },
+    "285248159": {
+      "Names": [
+        "ContextTuto_Investigation"
+      ],
+      "Category": "mission"
+    },
+    "285248160": {
+      "Names": [
+        "ContextTuto_MapMarker"
+      ],
+      "Category": "mission"
+    },
+    "2041162034": {
+      "Names": [
+        "ContextTuto_NoEagleVision"
+      ],
+      "Category": "mission"
+    },
+    "285248161": {
+      "Names": [
+        "ContextTuto_OCRed"
+      ],
+      "Category": "mission"
+    },
+    "285248162": {
+      "Names": [
+        "ContextTuto_PickpocketFailed"
+      ],
+      "Category": "mission"
+    },
+    "1407868332": {
+      "Names": [
+        "ContextTuto_Sprint"
+      ],
+      "Category": "mission"
+    },
+    "285248165": {
+      "Names": [
+        "ContextTuto_StrongAttack"
+      ],
+      "Category": "mission"
+    },
+    "285248166": {
+      "Names": [
+        "ContextTuto_Tackle"
+      ],
+      "Category": "mission"
+    },
+    "285248167": {
+      "Names": [
+        "ContextTuto_TargetGuardTower"
+      ],
+      "Category": "mission"
+    },
+    "285248128": {
+      "Names": [
+        "Contextual Tutorials"
+      ],
+      "Category": "mission"
+    },
+    "737193383": {
+      "Names": [
+        "ContextualTutorial_KilledInnocence"
+      ],
+      "Category": "mission"
+    },
+    "398316529": {
+      "Names": [
+        "CoolDownYellow"
+      ],
+      "Category": "mission"
+    },
+    "2981681824": {
+      "Names": [
+        "CountOr Mission 1"
+      ],
+      "Category": "mission"
+    },
+    "2981681772": {
+      "Names": [
+        "CountOr Mission 2"
+      ],
+      "Category": "mission"
+    },
+    "415098422": {
+      "Names": [
+        "CriticalState"
+      ],
+      "Category": "mission"
+    },
+    "1084682560": {
+      "Names": [
+        "Crowd_Manager"
+      ],
+      "Category": "mission"
+    },
+    "102823303": {
+      "Names": [
+        "Crusader OOB fight"
+      ],
+      "Category": "mission"
+    },
+    "116270018": {
+      "Names": [
+        "Damas_01"
+      ],
+      "Category": "mission"
+    },
+    "116270019": {
+      "Names": [
+        "Damas_02"
+      ],
+      "Category": "mission"
+    },
+    "116270020": {
+      "Names": [
+        "Damas_03"
+      ],
+      "Category": "mission"
+    },
+    "116270021": {
+      "Names": [
+        "Damas_04"
+      ],
+      "Category": "mission"
+    },
+    "116270022": {
+      "Names": [
+        "Damas_05"
+      ],
+      "Category": "mission"
+    },
+    "1767729675": {
+      "Names": [
+        "Damascus"
+      ],
+      "Category": "mission"
+    },
+    "1116882612": {
+      "Names": [
+        "Damascus MB3 OMB"
+      ],
+      "Category": "mission"
+    },
+    "1330022021": {
+      "Names": [
+        "Damascus intro Master shot"
+      ],
+      "Category": "mission"
+    },
+    "1469615633": {
+      "Names": [
+        "Damascus_Bureau_Leader_No_Mission"
+      ],
+      "Category": "mission"
+    },
+    "466580462": {
+      "Names": [
+        "Dismount_Tutorial_Popup"
+      ],
+      "Category": "mission"
+    },
+    "464021936": {
+      "Names": [
+        "DoneAMemoryReplay"
+      ],
+      "Category": "mission"
+    },
+    "2988485864": {
+      "Names": [
+        "Door_Access"
+      ],
+      "Category": "mission"
+    },
+    "3670586139": {
+      "Names": [
+        "E3_Menu_Start"
+      ],
+      "Category": "mission"
+    },
+    "814645553": {
+      "Names": [
+        "E3_RHP_Intro"
+      ],
+      "Category": "mission"
+    },
+    "854073371": {
+      "Names": [
+        "Eavesdropping_ED1"
+      ],
+      "Category": "mission"
+    },
+    "742072096": {
+      "Names": [
+        "Eavesdropping_M1_ED1"
+      ],
+      "Category": "mission"
+    },
+    "691976047": {
+      "Names": [
+        "Eavesdropping_OP2_ED2"
+      ],
+      "Category": "mission"
+    },
+    "3616374284": {
+      "Names": [
+        "Elipse&Save_LOF"
+      ],
+      "Category": "mission"
+    },
+    "2927099588": {
+      "Names": [
+        "Emir Popup To Masyaf"
+      ],
+      "Category": "mission"
+    },
+    "2589622815": {
+      "Names": [
+        "Enable Enticer 1"
+      ],
+      "Category": "mission"
+    },
+    "3825391792": {
+      "Names": [
+        "EnableEnticer_FM10_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3825391960": {
+      "Names": [
+        "EnableEnticer_FM11_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3825392299": {
+      "Names": [
+        "EnableEnticer_FM12_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3825390494": {
+      "Names": [
+        "EnableEnticer_FM1_Scholars"
+      ],
+      "Category": "mission"
+    },
+    "1562422988": {
+      "Names": [
+        "EnableEnticer_FM1_Vigilante"
+      ],
+      "Category": "mission"
+    },
+    "3825390495": {
+      "Names": [
+        "EnableEnticer_FM2_Scholars"
+      ],
+      "Category": "mission"
+    },
+    "3825390733": {
+      "Names": [
+        "EnableEnticer_FM3_Scholars"
+      ],
+      "Category": "mission"
+    },
+    "3825390852": {
+      "Names": [
+        "EnableEnticer_FM4_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3825390971": {
+      "Names": [
+        "EnableEnticer_FM5_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3825391115": {
+      "Names": [
+        "EnableEnticer_FM6_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3825390614": {
+      "Names": [
+        "EnableEnticer_FM7_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "1503077546": {
+      "Names": [
+        "EnableEnticer_FM8_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3825391519": {
+      "Names": [
+        "EnableEnticer_FM9_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "2698757145": {
+      "Names": [
+        "End Memory Block 2"
+      ],
+      "Category": "mission"
+    },
+    "2698756996": {
+      "Names": [
+        "End Memory Block 3"
+      ],
+      "Category": "mission"
+    },
+    "2698757038": {
+      "Names": [
+        "End Memory Block 4"
+      ],
+      "Category": "mission"
+    },
+    "2698757057": {
+      "Names": [
+        "End Memory Block 5"
+      ],
+      "Category": "mission"
+    },
+    "2927099736": {
+      "Names": [
+        "End Memory Block 6"
+      ],
+      "Category": "mission"
+    },
+    "1045371065": {
+      "Names": [
+        "Fake Fights"
+      ],
+      "Category": "mission"
+    },
+    "1565350250": {
+      "Names": [
+        "FastAttack_Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "1831185910": {
+      "Names": [
+        "FightMaster_Tutorial_A"
+      ],
+      "Category": "mission"
+    },
+    "2282147960": {
+      "Names": [
+        "FightMaster_Tutorial_B"
+      ],
+      "Category": "mission"
+    },
+    "609714042": {
+      "Names": [
+        "FightMaster_Tutorial_C"
+      ],
+      "Category": "mission"
+    },
+    "609714043": {
+      "Names": [
+        "FightMaster_Tutorial_D"
+      ],
+      "Category": "mission"
+    },
+    "2221553818": {
+      "Names": [
+        "FightScenarios"
+      ],
+      "Category": "mission"
+    },
+    "415098418": {
+      "Names": [
+        "FightingOnHorse"
+      ],
+      "Category": "mission"
+    },
+    "3660438348": {
+      "Names": [
+        "FinishEllipse"
+      ],
+      "Category": "mission"
+    },
+    "3119386432": {
+      "Names": [
+        "First_Target"
+      ],
+      "Category": "mission"
+    },
+    "2978756926": {
+      "Names": [
+        "Flashback Scene"
+      ],
+      "Category": "mission"
+    },
+    "1990703067": {
+      "Names": [
+        "FortressAbilityController"
+      ],
+      "Category": "mission"
+    },
+    "2553721653": {
+      "Names": [
+        "Free Mission 1"
+      ],
+      "Category": "mission"
+    },
+    "2588646576": {
+      "Names": [
+        "Free Mission 2"
+      ],
+      "Category": "mission"
+    },
+    "3217499545": {
+      "Names": [
+        "Free Mission DamasOutskirts"
+      ],
+      "Category": "mission"
+    },
+    "3354083772": {
+      "Names": [
+        "Free Mission Scholars Emir_FM6"
+      ],
+      "Category": "mission"
+    },
+    "1901545395": {
+      "Names": [
+        "FreeMissionTutorial"
+      ],
+      "Category": "mission"
+    },
+    "1315020873": {
+      "Names": [
+        "FreeMission_10"
+      ],
+      "Category": "mission"
+    },
+    "3831298048": {
+      "Names": [
+        "FreeMission_FM1"
+      ],
+      "Category": "mission"
+    },
+    "3363890024": {
+      "Names": [
+        "FreeMission_FM10"
+      ],
+      "Category": "mission"
+    },
+    "3724222261": {
+      "Names": [
+        "FreeMission_FM10_Reward_Scholars"
+      ],
+      "Category": "mission"
+    },
+    "3380848687": {
+      "Names": [
+        "FreeMission_FM10_Reward_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3363890025": {
+      "Names": [
+        "FreeMission_FM11"
+      ],
+      "Category": "mission"
+    },
+    "3724222272": {
+      "Names": [
+        "FreeMission_FM11_Reward_Scholars"
+      ],
+      "Category": "mission"
+    },
+    "3380848718": {
+      "Names": [
+        "FreeMission_FM11_Reward_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3363890026": {
+      "Names": [
+        "FreeMission_FM12"
+      ],
+      "Category": "mission"
+    },
+    "3380848729": {
+      "Names": [
+        "FreeMission_FM12_Reward_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "882333075": {
+      "Names": [
+        "FreeMission_FM1_Port"
+      ],
+      "Category": "mission"
+    },
+    "3380847410": {
+      "Names": [
+        "FreeMission_FM1_Reward_Scholars"
+      ],
+      "Category": "mission"
+    },
+    "3831298049": {
+      "Names": [
+        "FreeMission_FM1_Reward_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3831298504": {
+      "Names": [
+        "FreeMission_FM2"
+      ],
+      "Category": "mission"
+    },
+    "3460045455": {
+      "Names": [
+        "FreeMission_FM2_Reward_Scholars"
+      ],
+      "Category": "mission"
+    },
+    "3831298505": {
+      "Names": [
+        "FreeMission_FM2_Reward_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3835968595": {
+      "Names": [
+        "FreeMission_FM3"
+      ],
+      "Category": "mission"
+    },
+    "3835968596": {
+      "Names": [
+        "FreeMission_FM3_Reward_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3835968754": {
+      "Names": [
+        "FreeMission_FM4"
+      ],
+      "Category": "mission"
+    },
+    "1715158576": {
+      "Names": [
+        "FreeMission_FM4_Reward_Scholars"
+      ],
+      "Category": "mission"
+    },
+    "3835968755": {
+      "Names": [
+        "FreeMission_FM4_Reward_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3835968966": {
+      "Names": [
+        "FreeMission_FM5"
+      ],
+      "Category": "mission"
+    },
+    "3835968967": {
+      "Names": [
+        "FreeMission_FM5_Reward_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3835969398": {
+      "Names": [
+        "FreeMission_FM6"
+      ],
+      "Category": "mission"
+    },
+    "3835969399": {
+      "Names": [
+        "FreeMission_FM6_Reward_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3835969181": {
+      "Names": [
+        "FreeMission_FM7"
+      ],
+      "Category": "mission"
+    },
+    "3372359583": {
+      "Names": [
+        "FreeMission_FM7_Reward_Scholars"
+      ],
+      "Category": "mission"
+    },
+    "3835969182": {
+      "Names": [
+        "FreeMission_FM7_Reward_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3807191974": {
+      "Names": [
+        "FreeMission_FM8"
+      ],
+      "Category": "mission"
+    },
+    "2015060383": {
+      "Names": [
+        "FreeMission_FM8_Reward_Scholars"
+      ],
+      "Category": "mission"
+    },
+    "3460045353": {
+      "Names": [
+        "FreeMission_FM8_Reward_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3460045354": {
+      "Names": [
+        "FreeMission_FM9"
+      ],
+      "Category": "mission"
+    },
+    "3724222250": {
+      "Names": [
+        "FreeMission_FM9_Reward_Scholars"
+      ],
+      "Category": "mission"
+    },
+    "3460045355": {
+      "Names": [
+        "FreeMission_FM9_Reward_Vigilantes"
+      ],
+      "Category": "mission"
+    },
+    "3782971145": {
+      "Names": [
+        "Free_Mission_FM1"
+      ],
+      "Category": "mission"
+    },
+    "3782971358": {
+      "Names": [
+        "Free_Mission_FM2"
+      ],
+      "Category": "mission"
+    },
+    "3782971572": {
+      "Names": [
+        "Free_Mission_FM3"
+      ],
+      "Category": "mission"
+    },
+    "3782971760": {
+      "Names": [
+        "Free_Mission_FM4"
+      ],
+      "Category": "mission"
+    },
+    "3789055520": {
+      "Names": [
+        "Free_Mission_FM5"
+      ],
+      "Category": "mission"
+    },
+    "1327767258": {
+      "Names": [
+        "Free_Mission_FM6"
+      ],
+      "Category": "mission"
+    },
+    "3272181787": {
+      "Names": [
+        "Free_Mission_FM7"
+      ],
+      "Category": "mission"
+    },
+    "3272181925": {
+      "Names": [
+        "Free_Mission_FM8"
+      ],
+      "Category": "mission"
+    },
+    "1040056263": {
+      "Names": [
+        "GPS_Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "3448809545": {
+      "Names": [
+        "Game Start"
+      ],
+      "Category": "mission"
+    },
+    "2845651727": {
+      "Names": [
+        "Garnier Popup To Masyaf"
+      ],
+      "Category": "mission"
+    },
+    "1255999116": {
+      "Names": [
+        "Global_BlockDeflect_Reminder"
+      ],
+      "Category": "mission"
+    },
+    "343897488": {
+      "Names": [
+        "Global_Block_Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "1996477482": {
+      "Names": [
+        "Global_CinematicGlitch_Reminder"
+      ],
+      "Category": "mission"
+    },
+    "554046891": {
+      "Names": [
+        "Global_Dagger_Tutorial_001"
+      ],
+      "Category": "mission"
+    },
+    "554046892": {
+      "Names": [
+        "Global_Dagger_Tutorial_002"
+      ],
+      "Category": "mission"
+    },
+    "554046893": {
+      "Names": [
+        "Global_Dagger_Tutorial_003"
+      ],
+      "Category": "mission"
+    },
+    "554046894": {
+      "Names": [
+        "Global_Dagger_Tutorial_004"
+      ],
+      "Category": "mission"
+    },
+    "554046895": {
+      "Names": [
+        "Global_Dagger_Tutorial_005"
+      ],
+      "Category": "mission"
+    },
+    "343897480": {
+      "Names": [
+        "Global_FastAttack_Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "1255999064": {
+      "Names": [
+        "Global_GrabBreak_Reminder"
+      ],
+      "Category": "mission"
+    },
+    "1255998952": {
+      "Names": [
+        "Global_Grab_Reminder"
+      ],
+      "Category": "mission"
+    },
+    "1255998758": {
+      "Names": [
+        "Global_Interrogation_Reminder"
+      ],
+      "Category": "mission"
+    },
+    "466577366": {
+      "Names": [
+        "Global_Investigation_Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "737193384": {
+      "Names": [
+        "Global_KilledInnocence"
+      ],
+      "Category": "mission"
+    },
+    "724302789": {
+      "Names": [
+        "Global_MapMarker_Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "2041162035": {
+      "Names": [
+        "Global_NoEagleVisionTuto"
+      ],
+      "Category": "mission"
+    },
+    "1225424110": {
+      "Names": [
+        "Global_PickpocketFailed_Reminder"
+      ],
+      "Category": "mission"
+    },
+    "343897504": {
+      "Names": [
+        "Global_Profil_Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "1407868333": {
+      "Names": [
+        "Global_SprintTutorial"
+      ],
+      "Category": "mission"
+    },
+    "343897496": {
+      "Names": [
+        "Global_StrongAttack_Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "466578445": {
+      "Names": [
+        "Global_Tackle_Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "466577510": {
+      "Names": [
+        "Global_TargetAtGuardTower_Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "3064184129": {
+      "Names": [
+        "Hard Save mission action open"
+      ],
+      "Category": "mission"
+    },
+    "1726886021": {
+      "Names": [
+        "HelpingVillagers"
+      ],
+      "Category": "mission"
+    },
+    "3273617594": {
+      "Names": [
+        "Horse_Tutorials"
+      ],
+      "Category": "mission"
+    },
+    "2855994236": {
+      "Names": [
+        "Informer Race 1"
+      ],
+      "Category": "mission"
+    },
+    "1850112386": {
+      "Names": [
+        "InjuredVillagers"
+      ],
+      "Category": "mission"
+    },
+    "2067992634": {
+      "Names": [
+        "Interrogation_M2_INT1"
+      ],
+      "Category": "mission"
+    },
+    "3354637636": {
+      "Names": [
+        "Interrogation_M3_IN1"
+      ],
+      "Category": "mission"
+    },
+    "3816732872": {
+      "Names": [
+        "Interrogation_Mission_IN1"
+      ],
+      "Category": "mission"
+    },
+    "1970493182": {
+      "Names": [
+        "Investigation Completed"
+      ],
+      "Category": "mission"
+    },
+    "1519634207": {
+      "Names": [
+        "InvestigationAdvice_Loop"
+      ],
+      "Category": "mission"
+    },
+    "2546550750": {
+      "Names": [
+        "InvestigationContextualTuto_Acre"
+      ],
+      "Category": "mission"
+    },
+    "2529886158": {
+      "Names": [
+        "InvestigationContextualTuto_Damas"
+      ],
+      "Category": "mission"
+    },
+    "2546643619": {
+      "Names": [
+        "InvestigationContextualTuto_Jeru"
+      ],
+      "Category": "mission"
+    },
+    "116270648": {
+      "Names": [
+        "Jeru_01"
+      ],
+      "Category": "mission"
+    },
+    "116270645": {
+      "Names": [
+        "Jeru_02"
+      ],
+      "Category": "mission"
+    },
+    "116270646": {
+      "Names": [
+        "Jeru_03"
+      ],
+      "Category": "mission"
+    },
+    "116270647": {
+      "Names": [
+        "Jeru_04"
+      ],
+      "Category": "mission"
+    },
+    "1330022148": {
+      "Names": [
+        "Jerusalem Intro Mastershot"
+      ],
+      "Category": "mission"
+    },
+    "1116882508": {
+      "Names": [
+        "Jerusalem MB3 OMB"
+      ],
+      "Category": "mission"
+    },
+    "1116882535": {
+      "Names": [
+        "Jerusalem MB5 OMB"
+      ],
+      "Category": "mission"
+    },
+    "1469615624": {
+      "Names": [
+        "Jerusalem_Bureau_Leader_No_Mission"
+      ],
+      "Category": "mission"
+    },
+    "930370256": {
+      "Names": [
+        "Jubair Popup To Masyaf"
+      ],
+      "Category": "mission"
+    },
+    "817218959": {
+      "Names": [
+        "Kingdom"
+      ],
+      "Category": "mission"
+    },
+    "116271447": {
+      "Names": [
+        "Kingdom-Damas"
+      ],
+      "Category": "mission"
+    },
+    "2985281449": {
+      "Names": [
+        "Kingdom_MasterSHAT"
+      ],
+      "Category": "mission"
+    },
+    "3268124141": {
+      "Names": [
+        "Kingdom_Tutorials"
+      ],
+      "Category": "mission"
+    },
+    "3073572177": {
+      "Names": [
+        "Library_Guards"
+      ],
+      "Category": "mission"
+    },
+    "2927099109": {
+      "Names": [
+        "Load MB1"
+      ],
+      "Category": "mission"
+    },
+    "3063950381": {
+      "Names": [
+        "Load Memory Corridor"
+      ],
+      "Category": "mission"
+    },
+    "3216160637": {
+      "Names": [
+        "Load_Masyaf"
+      ],
+      "Category": "mission"
+    },
+    "2927099002": {
+      "Names": [
+        "M01_Flashback"
+      ],
+      "Category": "mission"
+    },
+    "2385071363": {
+      "Names": [
+        "M02_AnimusIntro"
+      ],
+      "Category": "mission"
+    },
+    "266624937": {
+      "Names": [
+        "M02_Morning_HideObjects"
+      ],
+      "Category": "mission"
+    },
+    "2385071367": {
+      "Names": [
+        "M02_S01_AnimusIntro"
+      ],
+      "Category": "mission"
+    },
+    "2385072451": {
+      "Names": [
+        "M03_MemoryCorridor"
+      ],
+      "Category": "mission"
+    },
+    "3837031326": {
+      "Names": [
+        "M03_S01_Synch_Bar_Philosophy"
+      ],
+      "Category": "mission"
+    },
+    "3837031450": {
+      "Names": [
+        "M03_S02_Puppeteering_Concept"
+      ],
+      "Category": "mission"
+    },
+    "152750855": {
+      "Names": [
+        "M03_S03_1stPerson"
+      ],
+      "Category": "mission"
+    },
+    "152750995": {
+      "Names": [
+        "M03_S04_Gentle_Push"
+      ],
+      "Category": "mission"
+    },
+    "165386730": {
+      "Names": [
+        "M03_S06_Grab_And_Throw"
+      ],
+      "Category": "mission"
+    },
+    "165387106": {
+      "Names": [
+        "M03_S07_Sprint"
+      ],
+      "Category": "mission"
+    },
+    "165387135": {
+      "Names": [
+        "M03_S08_Social_Status_Icon"
+      ],
+      "Category": "mission"
+    },
+    "319818050": {
+      "Names": [
+        "M03_S10_Stealth_Asssination"
+      ],
+      "Category": "mission"
+    },
+    "165387492": {
+      "Names": [
+        "M03_S11_Witness_Indicator_Red"
+      ],
+      "Category": "mission"
+    },
+    "165393044": {
+      "Names": [
+        "M03_S12_Social_Status_Open_Conflict"
+      ],
+      "Category": "mission"
+    },
+    "165393547": {
+      "Names": [
+        "M03_S13_Social_Status_Cool_Down"
+      ],
+      "Category": "mission"
+    },
+    "165393567": {
+      "Names": [
+        "M03_S14_Social_Status_Blending"
+      ],
+      "Category": "mission"
+    },
+    "165393601": {
+      "Names": [
+        "M03_S15_Social_Status_Blended"
+      ],
+      "Category": "mission"
+    },
+    "319828395": {
+      "Names": [
+        "M03_S16_Social_Status_Anonymous"
+      ],
+      "Category": "mission"
+    },
+    "319830643": {
+      "Names": [
+        "M03_S17_Blend"
+      ],
+      "Category": "mission"
+    },
+    "319830723": {
+      "Names": [
+        "M03_S18_Synch_Bar"
+      ],
+      "Category": "mission"
+    },
+    "319830724": {
+      "Names": [
+        "M03_S19_Eagle_Vision"
+      ],
+      "Category": "mission"
+    },
+    "616069199": {
+      "Names": [
+        "M03_S19_Eagle_Vision_Assassination"
+      ],
+      "Category": "mission"
+    },
+    "616069448": {
+      "Names": [
+        "M03_S19_Eagle_Vision_Investigation"
+      ],
+      "Category": "mission"
+    },
+    "319831773": {
+      "Names": [
+        "M03_S20_Animus_Tutorial_Complete"
+      ],
+      "Category": "mission"
+    },
+    "465351044": {
+      "Names": [
+        "M06_CloseFortressDoor"
+      ],
+      "Category": "mission"
+    },
+    "465351045": {
+      "Names": [
+        "M06_OpenFortressDoor"
+      ],
+      "Category": "mission"
+    },
+    "3083308811": {
+      "Names": [
+        "M08_Day1"
+      ],
+      "Category": "mission"
+    },
+    "3349011213": {
+      "Names": [
+        "M08_Evening"
+      ],
+      "Category": "mission"
+    },
+    "266619421": {
+      "Names": [
+        "M08_Evening_HideObjects"
+      ],
+      "Category": "mission"
+    },
+    "3083308812": {
+      "Names": [
+        "M08_Morning"
+      ],
+      "Category": "mission"
+    },
+    "266619414": {
+      "Names": [
+        "M08_Morning_HideObjects"
+      ],
+      "Category": "mission"
+    },
+    "3083308813": {
+      "Names": [
+        "M08_Night"
+      ],
+      "Category": "mission"
+    },
+    "3083308881": {
+      "Names": [
+        "M08_S01_NightSpeech"
+      ],
+      "Category": "mission"
+    },
+    "3083308894": {
+      "Names": [
+        "M08_S02_Eavesdropping"
+      ],
+      "Category": "mission"
+    },
+    "3083308893": {
+      "Names": [
+        "M08_S03_OptionalHints"
+      ],
+      "Category": "mission"
+    },
+    "3263581237": {
+      "Names": [
+        "M08_S04_DoorLockBark"
+      ],
+      "Category": "mission"
+    },
+    "1465300009": {
+      "Names": [
+        "M08_S04_LucyNightBarks"
+      ],
+      "Category": "mission"
+    },
+    "3083311196": {
+      "Names": [
+        "M08_S05_MorningSpeech"
+      ],
+      "Category": "mission"
+    },
+    "3326198408": {
+      "Names": [
+        "M08_S06_DresserClosed"
+      ],
+      "Category": "mission"
+    },
+    "3083311221": {
+      "Names": [
+        "M08_S06_MorningBarks"
+      ],
+      "Category": "mission"
+    },
+    "3349016829": {
+      "Names": [
+        "M08_S07_DresserLockBark"
+      ],
+      "Category": "mission"
+    },
+    "3558501368": {
+      "Names": [
+        "M08_S07_WhileMB01"
+      ],
+      "Category": "mission"
+    },
+    "2468147745": {
+      "Names": [
+        "M08_S08_BathroomSet"
+      ],
+      "Category": "mission"
+    },
+    "3554667439": {
+      "Names": [
+        "M08_S08_EavesdroppingOver_Vidic"
+      ],
+      "Category": "mission"
+    },
+    "3554668321": {
+      "Names": [
+        "M08_S09_EavesdroppingOver_Lucy"
+      ],
+      "Category": "mission"
+    },
+    "3015165868": {
+      "Names": [
+        "M13 Damascus Side Quest"
+      ],
+      "Category": "mission"
+    },
+    "830872736": {
+      "Names": [
+        "M13_Tamir"
+      ],
+      "Category": "mission"
+    },
+    "406234273": {
+      "Names": [
+        "M13_Tamir_Investigation"
+      ],
+      "Category": "mission"
+    },
+    "406234274": {
+      "Names": [
+        "M13_Tamir_Mission"
+      ],
+      "Category": "mission"
+    },
+    "1601331424": {
+      "Names": [
+        "M13_Tamir_MissionOpened"
+      ],
+      "Category": "mission"
+    },
+    "2043775268": {
+      "Names": [
+        "M15_Day2"
+      ],
+      "Category": "mission"
+    },
+    "2561692870": {
+      "Names": [
+        "M15_Day2_Morning"
+      ],
+      "Category": "mission"
+    },
+    "2561692860": {
+      "Names": [
+        "M15_Day2_Night"
+      ],
+      "Category": "mission"
+    },
+    "3349011986": {
+      "Names": [
+        "M15_Evening"
+      ],
+      "Category": "mission"
+    },
+    "266620767": {
+      "Names": [
+        "M15_Evening_HideObjects"
+      ],
+      "Category": "mission"
+    },
+    "266620774": {
+      "Names": [
+        "M15_Morning_HideObjects"
+      ],
+      "Category": "mission"
+    },
+    "2043775280": {
+      "Names": [
+        "M15_S01_NightSpeech"
+      ],
+      "Category": "mission"
+    },
+    "2043775567": {
+      "Names": [
+        "M15_S02_OptionalHints"
+      ],
+      "Category": "mission"
+    },
+    "2043788689": {
+      "Names": [
+        "M15_S03_MorningSpeech"
+      ],
+      "Category": "mission"
+    },
+    "1465300017": {
+      "Names": [
+        "M15_S04_LucyNightBarks"
+      ],
+      "Category": "mission"
+    },
+    "2686475585": {
+      "Names": [
+        "M15_S05_MorningBarks"
+      ],
+      "Category": "mission"
+    },
+    "3263582083": {
+      "Names": [
+        "M15_S06_DressedOpenedBark"
+      ],
+      "Category": "mission"
+    },
+    "2468147776": {
+      "Names": [
+        "M15_S07_BathroomSet"
+      ],
+      "Category": "mission"
+    },
+    "2920555669": {
+      "Names": [
+        "M15_S08_Lucy_Computer_Special"
+      ],
+      "Category": "mission"
+    },
+    "2964819020": {
+      "Names": [
+        "M20 Acre Side Quest"
+      ],
+      "Category": "mission"
+    },
+    "670458469": {
+      "Names": [
+        "M20_Garnier"
+      ],
+      "Category": "mission"
+    },
+    "406234496": {
+      "Names": [
+        "M20_Garnier_Investigation"
+      ],
+      "Category": "mission"
+    },
+    "406234497": {
+      "Names": [
+        "M20_Garnier_Mission"
+      ],
+      "Category": "mission"
+    },
+    "1601331552": {
+      "Names": [
+        "M20_Garnier_MissionOpened"
+      ],
+      "Category": "mission"
+    },
+    "2964819021": {
+      "Names": [
+        "M26 Jerusalem Side Quest"
+      ],
+      "Category": "mission"
+    },
+    "627692323": {
+      "Names": [
+        "M26_Talal"
+      ],
+      "Category": "mission"
+    },
+    "406234541": {
+      "Names": [
+        "M26_Talal_Investigation"
+      ],
+      "Category": "mission"
+    },
+    "406234542": {
+      "Names": [
+        "M26_Talal_Mission"
+      ],
+      "Category": "mission"
+    },
+    "1601331578": {
+      "Names": [
+        "M26_Talal_MissionOpened"
+      ],
+      "Category": "mission"
+    },
+    "2202146831": {
+      "Names": [
+        "M28_Day3"
+      ],
+      "Category": "mission"
+    },
+    "2927440048": {
+      "Names": [
+        "M28_Evening"
+      ],
+      "Category": "mission"
+    },
+    "266620781": {
+      "Names": [
+        "M28_Evening_HideObjects"
+      ],
+      "Category": "mission"
+    },
+    "2927440063": {
+      "Names": [
+        "M28_Morning"
+      ],
+      "Category": "mission"
+    },
+    "266620788": {
+      "Names": [
+        "M28_Morning_HideObjects"
+      ],
+      "Category": "mission"
+    },
+    "3554667229": {
+      "Names": [
+        "M28_Night"
+      ],
+      "Category": "mission"
+    },
+    "2202148717": {
+      "Names": [
+        "M28_S01_NightSpeech"
+      ],
+      "Category": "mission"
+    },
+    "2202154374": {
+      "Names": [
+        "M28_S02_OptionalHints"
+      ],
+      "Category": "mission"
+    },
+    "2927440070": {
+      "Names": [
+        "M28_S03_MorningSpeech"
+      ],
+      "Category": "mission"
+    },
+    "1083630517": {
+      "Names": [
+        "M28_S04_LucyNightBarks"
+      ],
+      "Category": "mission"
+    },
+    "2927440072": {
+      "Names": [
+        "M28_S04_MorningBarks"
+      ],
+      "Category": "mission"
+    },
+    "2391047376": {
+      "Names": [
+        "M28_S06_ReEnableAnimus"
+      ],
+      "Category": "mission"
+    },
+    "3958573514": {
+      "Names": [
+        "M28_S07_WhileMB04"
+      ],
+      "Category": "mission"
+    },
+    "2468147798": {
+      "Names": [
+        "M28_S09_BathroomSet"
+      ],
+      "Category": "mission"
+    },
+    "2964819112": {
+      "Names": [
+        "M33 Damascus Side Quest"
+      ],
+      "Category": "mission"
+    },
+    "642457611": {
+      "Names": [
+        "M33_Vizier"
+      ],
+      "Category": "mission"
+    },
+    "406234579": {
+      "Names": [
+        "M33_Vizier_Investigation"
+      ],
+      "Category": "mission"
+    },
+    "406234580": {
+      "Names": [
+        "M33_Vizier_Mission"
+      ],
+      "Category": "mission"
+    },
+    "1601331656": {
+      "Names": [
+        "M33_Vizier_MissionOpened"
+      ],
+      "Category": "mission"
+    },
+    "2964819111": {
+      "Names": [
+        "M39 Jerusalem Side Quest"
+      ],
+      "Category": "mission"
+    },
+    "854073124": {
+      "Names": [
+        "M39_Emir"
+      ],
+      "Category": "mission"
+    },
+    "425401046": {
+      "Names": [
+        "M39_Emir_Investigation"
+      ],
+      "Category": "mission"
+    },
+    "3270701912": {
+      "Names": [
+        "M39_Emir_Mission"
+      ],
+      "Category": "mission"
+    },
+    "1601331630": {
+      "Names": [
+        "M39_Emir_MissionOpened"
+      ],
+      "Category": "mission"
+    },
+    "2964819113": {
+      "Names": [
+        "M45 Acre Side Quest"
+      ],
+      "Category": "mission"
+    },
+    "742071947": {
+      "Names": [
+        "M45_Montferrat"
+      ],
+      "Category": "mission"
+    },
+    "3480358572": {
+      "Names": [
+        "M45_Montferrat_Investigation"
+      ],
+      "Category": "mission"
+    },
+    "3480358571": {
+      "Names": [
+        "M45_Montferrat_Mission"
+      ],
+      "Category": "mission"
+    },
+    "1601331604": {
+      "Names": [
+        "M45_Montferrat_MissionOpened"
+      ],
+      "Category": "mission"
+    },
+    "2266061525": {
+      "Names": [
+        "M47_Day4"
+      ],
+      "Category": "mission"
+    },
+    "3695189471": {
+      "Names": [
+        "M47_Evening"
+      ],
+      "Category": "mission"
+    },
+    "266620795": {
+      "Names": [
+        "M47_Evening_HideObjects"
+      ],
+      "Category": "mission"
+    },
+    "3695189473": {
+      "Names": [
+        "M47_Morning"
+      ],
+      "Category": "mission"
+    },
+    "266620802": {
+      "Names": [
+        "M47_Morning_HideObjects"
+      ],
+      "Category": "mission"
+    },
+    "3695189472": {
+      "Names": [
+        "M47_Night"
+      ],
+      "Category": "mission"
+    },
+    "2266061526": {
+      "Names": [
+        "M47_S01_NightSpeech"
+      ],
+      "Category": "mission"
+    },
+    "2266061967": {
+      "Names": [
+        "M47_S02_MorningSpeech"
+      ],
+      "Category": "mission"
+    },
+    "3695195502": {
+      "Names": [
+        "M47_S03_MorningBarks"
+      ],
+      "Category": "mission"
+    },
+    "2468147822": {
+      "Names": [
+        "M47_S04_BathroomSet"
+      ],
+      "Category": "mission"
+    },
+    "2964819156": {
+      "Names": [
+        "M52 Acre Side Quest"
+      ],
+      "Category": "mission"
+    },
+    "742072107": {
+      "Names": [
+        "M52_Sibrand"
+      ],
+      "Category": "mission"
+    },
+    "425401000": {
+      "Names": [
+        "M52_Sibrand_Investigation"
+      ],
+      "Category": "mission"
+    },
+    "425401001": {
+      "Names": [
+        "M52_Sibrand_Mission"
+      ],
+      "Category": "mission"
+    },
+    "1601331682": {
+      "Names": [
+        "M52_Sibrand_MissionOpened"
+      ],
+      "Category": "mission"
+    },
+    "2964819155": {
+      "Names": [
+        "M58 Damascus Side Quest"
+      ],
+      "Category": "mission"
+    },
+    "798515786": {
+      "Names": [
+        "M58_Jubair"
+      ],
+      "Category": "mission"
+    },
+    "425401081": {
+      "Names": [
+        "M58_Jubair_Investigation"
+      ],
+      "Category": "mission"
+    },
+    "2906314750": {
+      "Names": [
+        "M58_Jubair_Kiosks_BK1"
+      ],
+      "Category": "mission"
+    },
+    "425401082": {
+      "Names": [
+        "M58_Jubair_Mission"
+      ],
+      "Category": "mission"
+    },
+    "1487995171": {
+      "Names": [
+        "M58_Jubair_MissionOpened"
+      ],
+      "Category": "mission"
+    },
+    "2379333997": {
+      "Names": [
+        "M60_Day5"
+      ],
+      "Category": "mission"
+    },
+    "535323022": {
+      "Names": [
+        "M60_Evening"
+      ],
+      "Category": "mission"
+    },
+    "266620809": {
+      "Names": [
+        "M60_Evening_HideObjects"
+      ],
+      "Category": "mission"
+    },
+    "535323024": {
+      "Names": [
+        "M60_Morning"
+      ],
+      "Category": "mission"
+    },
+    "266620816": {
+      "Names": [
+        "M60_Morning_HideObjects"
+      ],
+      "Category": "mission"
+    },
+    "535323023": {
+      "Names": [
+        "M60_Night"
+      ],
+      "Category": "mission"
+    },
+    "2384068285": {
+      "Names": [
+        "M60_S01_NightSpeech"
+      ],
+      "Category": "mission"
+    },
+    "2384068286": {
+      "Names": [
+        "M60_S02_OptionalHints"
+      ],
+      "Category": "mission"
+    },
+    "1083629131": {
+      "Names": [
+        "M60_S03_MorningBarks"
+      ],
+      "Category": "mission"
+    },
+    "880786086": {
+      "Names": [
+        "M60_S03_MorningSpeech"
+      ],
+      "Category": "mission"
+    },
+    "1083631678": {
+      "Names": [
+        "M60_S04_LucyNightBarks"
+      ],
+      "Category": "mission"
+    },
+    "2468147844": {
+      "Names": [
+        "M60_S05_BathroomSet"
+      ],
+      "Category": "mission"
+    },
+    "2964819197": {
+      "Names": [
+        "M65 Jerusalem Side Quest"
+      ],
+      "Category": "mission"
+    },
+    "854073123": {
+      "Names": [
+        "M65_Maria"
+      ],
+      "Category": "mission"
+    },
+    "425401135": {
+      "Names": [
+        "M65_Maria_Investigation"
+      ],
+      "Category": "mission"
+    },
+    "425401136": {
+      "Names": [
+        "M65_Maria_Mission"
+      ],
+      "Category": "mission"
+    },
+    "1601331733": {
+      "Names": [
+        "M65_Maria_MissionOpened"
+      ],
+      "Category": "mission"
+    },
+    "1013569902": {
+      "Names": [
+        "M69_RobertDeSable"
+      ],
+      "Category": "mission"
+    },
+    "746183747": {
+      "Names": [
+        "M69_RobertDeSable_MM"
+      ],
+      "Category": "mission"
+    },
+    "2927098999": {
+      "Names": [
+        "M70_Day6"
+      ],
+      "Category": "mission"
+    },
+    "880774170": {
+      "Names": [
+        "M70_Evening"
+      ],
+      "Category": "mission"
+    },
+    "266620823": {
+      "Names": [
+        "M70_Evening_HideObjects"
+      ],
+      "Category": "mission"
+    },
+    "880774169": {
+      "Names": [
+        "M70_Morning"
+      ],
+      "Category": "mission"
+    },
+    "266620830": {
+      "Names": [
+        "M70_Morning_HideObjects"
+      ],
+      "Category": "mission"
+    },
+    "880774168": {
+      "Names": [
+        "M70_Night"
+      ],
+      "Category": "mission"
+    },
+    "880774186": {
+      "Names": [
+        "M70_S01_NightSpeech"
+      ],
+      "Category": "mission"
+    },
+    "880778325": {
+      "Names": [
+        "M70_S02_OptionalHints"
+      ],
+      "Category": "mission"
+    },
+    "880778600": {
+      "Names": [
+        "M70_S03_MorningBarks"
+      ],
+      "Category": "mission"
+    },
+    "1696855778": {
+      "Names": [
+        "M70_S03_MorningSpeech"
+      ],
+      "Category": "mission"
+    },
+    "880778482": {
+      "Names": [
+        "M70_S04_LucyNightBarks"
+      ],
+      "Category": "mission"
+    },
+    "2468147866": {
+      "Names": [
+        "M70_S05_BathroomSet"
+      ],
+      "Category": "mission"
+    },
+    "2927099001": {
+      "Names": [
+        "M72_Day7"
+      ],
+      "Category": "mission"
+    },
+    "3051153015": {
+      "Names": [
+        "M72_Night"
+      ],
+      "Category": "mission"
+    },
+    "880785416": {
+      "Names": [
+        "M72_S01_NightSpeech"
+      ],
+      "Category": "mission"
+    },
+    "2468147888": {
+      "Names": [
+        "M72_S03_BathroomSet"
+      ],
+      "Category": "mission"
+    },
+    "2592877460": {
+      "Names": [
+        "M72_S04_Secret_Ending"
+      ],
+      "Category": "mission"
+    },
+    "2920551781": {
+      "Names": [
+        "M72_S05_Post_Credits"
+      ],
+      "Category": "mission"
+    },
+    "437710627": {
+      "Names": [
+        "M99_S01_DNA"
+      ],
+      "Category": "mission"
+    },
+    "678197412": {
+      "Names": [
+        "M99_S02_HUD"
+      ],
+      "Category": "mission"
+    },
+    "2266061964": {
+      "Names": [
+        "M99_S03_DesmondDoorRestricted"
+      ],
+      "Category": "mission"
+    },
+    "3083308922": {
+      "Names": [
+        "M99_S08_NightSleep"
+      ],
+      "Category": "mission"
+    },
+    "3083311019": {
+      "Names": [
+        "M99_S18_DestroyLucy"
+      ],
+      "Category": "mission"
+    },
+    "2266061965": {
+      "Names": [
+        "M99_S21_DestroyLucy"
+      ],
+      "Category": "mission"
+    },
+    "3695189544": {
+      "Names": [
+        "M99_S22_HideInventory"
+      ],
+      "Category": "mission"
+    },
+    "4021657352": {
+      "Names": [
+        "M99_S25_Lucy_Computer"
+      ],
+      "Category": "mission"
+    },
+    "4021657383": {
+      "Names": [
+        "M99_S26_Vidic_Computer"
+      ],
+      "Category": "mission"
+    },
+    "4021658457": {
+      "Names": [
+        "M99_S27_Conference_Computer"
+      ],
+      "Category": "mission"
+    },
+    "2716095706": {
+      "Names": [
+        "M99_S32_ResetDoor"
+      ],
+      "Category": "mission"
+    },
+    "2920561702": {
+      "Names": [
+        "M99_S33_Post_Pickpocket_Lucy"
+      ],
+      "Category": "mission"
+    },
+    "2927099749": {
+      "Names": [
+        "MB02 - Side Quest"
+      ],
+      "Category": "mission"
+    },
+    "2909688964": {
+      "Names": [
+        "MB02_M13_Tamir_Escort_ES1"
+      ],
+      "Category": "mission"
+    },
+    "2855464721": {
+      "Names": [
+        "MB02_M13_Tamir_Freerun_FR1"
+      ],
+      "Category": "mission"
+    },
+    "2797450938": {
+      "Names": [
+        "MB02_Masyaf_Investigation"
+      ],
+      "Category": "mission"
+    },
+    "2964819019": {
+      "Names": [
+        "MB03 - Side Quest"
+      ],
+      "Category": "mission"
+    },
+    "2840340991": {
+      "Names": [
+        "MB03_M20_Garnier_Archers_ASK1"
+      ],
+      "Category": "mission"
+    },
+    "2964819110": {
+      "Names": [
+        "MB04 - Side Quest"
+      ],
+      "Category": "mission"
+    },
+    "2858065936": {
+      "Names": [
+        "MB04_M33_Vizier_Kiosks_BK1"
+      ],
+      "Category": "mission"
+    },
+    "2851031757": {
+      "Names": [
+        "MB04_M45_Montferrat_Archers_ASK1"
+      ],
+      "Category": "mission"
+    },
+    "2861389450": {
+      "Names": [
+        "MB04_M45_Montferrat_Kiosks_BK1"
+      ],
+      "Category": "mission"
+    },
+    "2964819154": {
+      "Names": [
+        "MB05 - Side Quest"
+      ],
+      "Category": "mission"
+    },
+    "2858907720": {
+      "Names": [
+        "MB05_M58_Jubair_Freerun_FR1"
+      ],
+      "Category": "mission"
+    },
+    "2964819196": {
+      "Names": [
+        "MB06 - Side Quest"
+      ],
+      "Category": "mission"
+    },
+    "634600621": {
+      "Names": [
+        "MM71_KillSinan"
+      ],
+      "Category": "mission"
+    },
+    "1857452235": {
+      "Names": [
+        "MM_Emir"
+      ],
+      "Category": "mission"
+    },
+    "874127772": {
+      "Names": [
+        "MM_Garnier"
+      ],
+      "Category": "mission"
+    },
+    "1657684342": {
+      "Names": [
+        "MM_Jubair"
+      ],
+      "Category": "mission"
+    },
+    "881016221": {
+      "Names": [
+        "MM_KillSinan"
+      ],
+      "Category": "mission"
+    },
+    "1418489382": {
+      "Names": [
+        "MM_Maria"
+      ],
+      "Category": "mission"
+    },
+    "882332867": {
+      "Names": [
+        "MM_Montferrat"
+      ],
+      "Category": "mission"
+    },
+    "882333072": {
+      "Names": [
+        "MM_Sibrand"
+      ],
+      "Category": "mission"
+    },
+    "812061837": {
+      "Names": [
+        "MM_Talal"
+      ],
+      "Category": "mission"
+    },
+    "872515326": {
+      "Names": [
+        "MM_Tamir"
+      ],
+      "Category": "mission"
+    },
+    "872515335": {
+      "Names": [
+        "MM_Vizier"
+      ],
+      "Category": "mission"
+    },
+    "1016827387": {
+      "Names": [
+        "Main - After Must See"
+      ],
+      "Category": "mission"
+    },
+    "1016827336": {
+      "Names": [
+        "Main - Before Brefing"
+      ],
+      "Category": "mission"
+    },
+    "1005212780": {
+      "Names": [
+        "Malik Brother Path"
+      ],
+      "Category": "mission"
+    },
+    "1005212779": {
+      "Names": [
+        "Malik Path"
+      ],
+      "Category": "mission"
+    },
+    "854073148": {
+      "Names": [
+        "Mandatory_Eavesdropping_ED1"
+      ],
+      "Category": "mission"
+    },
+    "3306076327": {
+      "Names": [
+        "Mandatory_Interrogation_IN1"
+      ],
+      "Category": "mission"
+    },
+    "627692326": {
+      "Names": [
+        "Mandatory_Pickpocket_P1"
+      ],
+      "Category": "mission"
+    },
+    "854073368": {
+      "Names": [
+        "Mandatory_Pickpocket_PP1"
+      ],
+      "Category": "mission"
+    },
+    "2078130654": {
+      "Names": [
+        "MassacreScenes"
+      ],
+      "Category": "mission"
+    },
+    "2539729074": {
+      "Names": [
+        "MasyafCrowd_Picpocket"
+      ],
+      "Category": "mission"
+    },
+    "116271052": {
+      "Names": [
+        "Masyaf_01"
+      ],
+      "Category": "mission"
+    },
+    "3859493573": {
+      "Names": [
+        "Masyaf_Camera_Intro"
+      ],
+      "Category": "mission"
+    },
+    "373982429": {
+      "Names": [
+        "MemLog_DefeatTemplars"
+      ],
+      "Category": "mission"
+    },
+    "373982428": {
+      "Names": [
+        "MemLog_DefendTheVillage"
+      ],
+      "Category": "mission"
+    },
+    "1100876471": {
+      "Names": [
+        "Memory Block 1"
+      ],
+      "Category": "mission"
+    },
+    "1100876486": {
+      "Names": [
+        "Memory Block 1 - Masyaf"
+      ],
+      "Category": "mission"
+    },
+    "2308058387": {
+      "Names": [
+        "Memory Block 2"
+      ],
+      "Category": "mission"
+    },
+    "2308058638": {
+      "Names": [
+        "Memory Block 3"
+      ],
+      "Category": "mission"
+    },
+    "2308058656": {
+      "Names": [
+        "Memory Block 4"
+      ],
+      "Category": "mission"
+    },
+    "2308058680": {
+      "Names": [
+        "Memory Block 5"
+      ],
+      "Category": "mission"
+    },
+    "2308058698": {
+      "Names": [
+        "Memory Block 6"
+      ],
+      "Category": "mission"
+    },
+    "2927099000": {
+      "Names": [
+        "Memory Block 7"
+      ],
+      "Category": "mission"
+    },
+    "572236906": {
+      "Names": [
+        "MemoryLog_Templars"
+      ],
+      "Category": "mission"
+    },
+    "572236845": {
+      "Names": [
+        "MemoryLog_Village"
+      ],
+      "Category": "mission"
+    },
+    "3051245889": {
+      "Names": [
+        "MissionItemInformerAssassination 1"
+      ],
+      "Category": "mission"
+    },
+    "3051245439": {
+      "Names": [
+        "MissionItemInformerAssassination 2"
+      ],
+      "Category": "mission"
+    },
+    "2840534711": {
+      "Names": [
+        "MissionItemInformerAssassinationArcher 1"
+      ],
+      "Category": "mission"
+    },
+    "2913486109": {
+      "Names": [
+        "MissionItemInformerEscort 1"
+      ],
+      "Category": "mission"
+    },
+    "3051245771": {
+      "Names": [
+        "MissionItemInformerFlag 1"
+      ],
+      "Category": "mission"
+    },
+    "2927099585": {
+      "Names": [
+        "Montferrat Popup To Masyaf"
+      ],
+      "Category": "mission"
+    },
+    "58447219": {
+      "Names": [
+        "MultiWorld"
+      ],
+      "Category": "mission"
+    },
+    "3083311220": {
+      "Names": [
+        "Mx_Sx_Scene_StartMemoryBlock"
+      ],
+      "Category": "mission"
+    },
+    "3083308908": {
+      "Names": [
+        "Mx_Sx_Scene_StartNight"
+      ],
+      "Category": "mission"
+    },
+    "2931000742": {
+      "Names": [
+        "NPC path to Temple"
+      ],
+      "Category": "mission"
+    },
+    "345926341": {
+      "Names": [
+        "OCRed"
+      ],
+      "Category": "mission"
+    },
+    "2311731111": {
+      "Names": [
+        "OpenMasyafDoors"
+      ],
+      "Category": "mission"
+    },
+    "821141044": {
+      "Names": [
+        "Optional_Eavesdropping_ED4"
+      ],
+      "Category": "mission"
+    },
+    "1111382424": {
+      "Names": [
+        "OutOfBound_Acre"
+      ],
+      "Category": "mission"
+    },
+    "1111382423": {
+      "Names": [
+        "OutOfBound_Damas"
+      ],
+      "Category": "mission"
+    },
+    "1111382425": {
+      "Names": [
+        "OutOfBound_Jerusalem"
+      ],
+      "Category": "mission"
+    },
+    "3100782878": {
+      "Names": [
+        "OutOfBound_Kingdom"
+      ],
+      "Category": "mission"
+    },
+    "2553721648": {
+      "Names": [
+        "Outskirts Setup Acre"
+      ],
+      "Category": "mission"
+    },
+    "2725135542": {
+      "Names": [
+        "Outskirts Setup Jerusalem"
+      ],
+      "Category": "mission"
+    },
+    "2311396771": {
+      "Names": [
+        "OverrideDefaultSpawner"
+      ],
+      "Category": "mission"
+    },
+    "2311396893": {
+      "Names": [
+        "OverrideDefaultSpawner1"
+      ],
+      "Category": "mission"
+    },
+    "3488878065": {
+      "Names": [
+        "OverrideDefaultSpawner2"
+      ],
+      "Category": "mission"
+    },
+    "2311396894": {
+      "Names": [
+        "OverrideDefaultSpawner3"
+      ],
+      "Category": "mission"
+    },
+    "2311396912": {
+      "Names": [
+        "OverrideDefaultSpawner4"
+      ],
+      "Category": "mission"
+    },
+    "415098419": {
+      "Names": [
+        "PickpocketFailed"
+      ],
+      "Category": "mission"
+    },
+    "670458652": {
+      "Names": [
+        "Pickpocket_M3_PP1"
+      ],
+      "Category": "mission"
+    },
+    "742072101": {
+      "Names": [
+        "Pickpocket_OP3_PP3"
+      ],
+      "Category": "mission"
+    },
+    "2590315481": {
+      "Names": [
+        "Post-Garnier MM"
+      ],
+      "Category": "mission"
+    },
+    "259423279": {
+      "Names": [
+        "Post-MM Emir"
+      ],
+      "Category": "mission"
+    },
+    "2927099680": {
+      "Names": [
+        "Post-MM Jubair"
+      ],
+      "Category": "mission"
+    },
+    "2927099586": {
+      "Names": [
+        "Post-MM Montferrat"
+      ],
+      "Category": "mission"
+    },
+    "2927099676": {
+      "Names": [
+        "Post-MM Sibrand"
+      ],
+      "Category": "mission"
+    },
+    "2927099592": {
+      "Names": [
+        "Post-MM Vizier"
+      ],
+      "Category": "mission"
+    },
+    "2590315482": {
+      "Names": [
+        "Post-Talal MM"
+      ],
+      "Category": "mission"
+    },
+    "3466535094": {
+      "Names": [
+        "PostReachHighPoint_Tutorial_Popup"
+      ],
+      "Category": "mission"
+    },
+    "3268124142": {
+      "Names": [
+        "PreReachHighPoint_Tutorial_Popup"
+      ],
+      "Category": "mission"
+    },
+    "3506289656": {
+      "Names": [
+        "Present"
+      ],
+      "Category": "mission"
+    },
+    "2927098981": {
+      "Names": [
+        "Present - While MB01"
+      ],
+      "Category": "mission"
+    },
+    "2927098994": {
+      "Names": [
+        "Present - While MB02"
+      ],
+      "Category": "mission"
+    },
+    "2927098995": {
+      "Names": [
+        "Present - While MB03"
+      ],
+      "Category": "mission"
+    },
+    "2927098996": {
+      "Names": [
+        "Present - While MB04"
+      ],
+      "Category": "mission"
+    },
+    "2927098997": {
+      "Names": [
+        "Present - While MB05"
+      ],
+      "Category": "mission"
+    },
+    "2927098998": {
+      "Names": [
+        "Present - While MB06"
+      ],
+      "Category": "mission"
+    },
+    "2927099067": {
+      "Names": [
+        "Present - While MB07"
+      ],
+      "Category": "mission"
+    },
+    "1565350253": {
+      "Names": [
+        "Profile_Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "58447223": {
+      "Names": [
+        "QA_Walkthrough"
+      ],
+      "Category": "mission"
+    },
+    "2981681844": {
+      "Names": [
+        "Quick Teleport 1"
+      ],
+      "Category": "mission"
+    },
+    "2981681825": {
+      "Names": [
+        "Quick Teleport 2"
+      ],
+      "Category": "mission"
+    },
+    "2981681771": {
+      "Names": [
+        "Quick Teleport 3"
+      ],
+      "Category": "mission"
+    },
+    "1366708398": {
+      "Names": [
+        "RaufPanic_Loop"
+      ],
+      "Category": "mission"
+    },
+    "2981679381": {
+      "Names": [
+        "Re-Enable Animus"
+      ],
+      "Category": "mission"
+    },
+    "941289772": {
+      "Names": [
+        "Reach High Point 1"
+      ],
+      "Category": "mission"
+    },
+    "2794950220": {
+      "Names": [
+        "Reach High Point 10"
+      ],
+      "Category": "mission"
+    },
+    "2794950221": {
+      "Names": [
+        "Reach High Point 11"
+      ],
+      "Category": "mission"
+    },
+    "2794950200": {
+      "Names": [
+        "Reach High Point 2"
+      ],
+      "Category": "mission"
+    },
+    "2794950213": {
+      "Names": [
+        "Reach High Point 3"
+      ],
+      "Category": "mission"
+    },
+    "2794950214": {
+      "Names": [
+        "Reach High Point 4"
+      ],
+      "Category": "mission"
+    },
+    "2794950215": {
+      "Names": [
+        "Reach High Point 5"
+      ],
+      "Category": "mission"
+    },
+    "2794950216": {
+      "Names": [
+        "Reach High Point 6"
+      ],
+      "Category": "mission"
+    },
+    "2794950217": {
+      "Names": [
+        "Reach High Point 7"
+      ],
+      "Category": "mission"
+    },
+    "2794950218": {
+      "Names": [
+        "Reach High Point 8"
+      ],
+      "Category": "mission"
+    },
+    "2794950219": {
+      "Names": [
+        "Reach High Point 9"
+      ],
+      "Category": "mission"
+    },
+    "874127769": {
+      "Names": [
+        "ReachHighPoint_HP01"
+      ],
+      "Category": "mission"
+    },
+    "874127770": {
+      "Names": [
+        "ReachHighPoint_HP02"
+      ],
+      "Category": "mission"
+    },
+    "874127771": {
+      "Names": [
+        "ReachHighPoint_HP03"
+      ],
+      "Category": "mission"
+    },
+    "2003412668": {
+      "Names": [
+        "ReachHighPoint_HP04"
+      ],
+      "Category": "mission"
+    },
+    "2003412722": {
+      "Names": [
+        "ReachHighPoint_HP05"
+      ],
+      "Category": "mission"
+    },
+    "2003412744": {
+      "Names": [
+        "ReachHighPoint_HP06"
+      ],
+      "Category": "mission"
+    },
+    "2003412772": {
+      "Names": [
+        "ReachHighPoint_HP07"
+      ],
+      "Category": "mission"
+    },
+    "2003412800": {
+      "Names": [
+        "ReachHighPoint_HP08"
+      ],
+      "Category": "mission"
+    },
+    "2003412828": {
+      "Names": [
+        "ReachHighPoint_HP09"
+      ],
+      "Category": "mission"
+    },
+    "977766738": {
+      "Names": [
+        "ReachHighPoint_HP1"
+      ],
+      "Category": "mission"
+    },
+    "2003413395": {
+      "Names": [
+        "ReachHighPoint_HP10"
+      ],
+      "Category": "mission"
+    },
+    "2003413423": {
+      "Names": [
+        "ReachHighPoint_HP11"
+      ],
+      "Category": "mission"
+    },
+    "977766739": {
+      "Names": [
+        "ReachHighPoint_HP2"
+      ],
+      "Category": "mission"
+    },
+    "977766740": {
+      "Names": [
+        "ReachHighPoint_HP3"
+      ],
+      "Category": "mission"
+    },
+    "2009059749": {
+      "Names": [
+        "ReachHighPoint_HP4"
+      ],
+      "Category": "mission"
+    },
+    "2015791115": {
+      "Names": [
+        "ReachHighPoint_HP5"
+      ],
+      "Category": "mission"
+    },
+    "2015791650": {
+      "Names": [
+        "ReachHighPoint_HP6"
+      ],
+      "Category": "mission"
+    },
+    "2015793106": {
+      "Names": [
+        "ReachHighPoint_HP7"
+      ],
+      "Category": "mission"
+    },
+    "2015793459": {
+      "Names": [
+        "ReachHighPoint_HP8"
+      ],
+      "Category": "mission"
+    },
+    "2015793524": {
+      "Names": [
+        "ReachHighPoint_HP9"
+      ],
+      "Category": "mission"
+    },
+    "1919348986": {
+      "Names": [
+        "ReachHighPoint_RHP10"
+      ],
+      "Category": "mission"
+    },
+    "3268124143": {
+      "Names": [
+        "ReachHighPoint_Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "466580463": {
+      "Names": [
+        "ReachHighPoint_Tutorial_Popup"
+      ],
+      "Category": "mission"
+    },
+    "707524765": {
+      "Names": [
+        "ReminderBenchHidePlace"
+      ],
+      "Category": "mission"
+    },
+    "707524766": {
+      "Names": [
+        "ReminderFightOnHorse"
+      ],
+      "Category": "mission"
+    },
+    "707524786": {
+      "Names": [
+        "ReminderReachHighPoint"
+      ],
+      "Category": "mission"
+    },
+    "707524755": {
+      "Names": [
+        "ReminderRunFromGuard"
+      ],
+      "Category": "mission"
+    },
+    "3112165733": {
+      "Names": [
+        "ReminderThrowDaggers"
+      ],
+      "Category": "mission"
+    },
+    "285248169": {
+      "Names": [
+        "ReminderTuto_BenchHidePlace"
+      ],
+      "Category": "mission"
+    },
+    "285248170": {
+      "Names": [
+        "ReminderTuto_BlockDeflect"
+      ],
+      "Category": "mission"
+    },
+    "285248171": {
+      "Names": [
+        "ReminderTuto_CinematicGlitch"
+      ],
+      "Category": "mission"
+    },
+    "285248174": {
+      "Names": [
+        "ReminderTuto_FightOnHorse"
+      ],
+      "Category": "mission"
+    },
+    "285248175": {
+      "Names": [
+        "ReminderTuto_Grab"
+      ],
+      "Category": "mission"
+    },
+    "285248176": {
+      "Names": [
+        "ReminderTuto_GrabBreaker"
+      ],
+      "Category": "mission"
+    },
+    "285248178": {
+      "Names": [
+        "ReminderTuto_Interrogation"
+      ],
+      "Category": "mission"
+    },
+    "285248179": {
+      "Names": [
+        "ReminderTuto_PickpocketFailed"
+      ],
+      "Category": "mission"
+    },
+    "285248180": {
+      "Names": [
+        "ReminderTuto_ReachHighPoint"
+      ],
+      "Category": "mission"
+    },
+    "285248181": {
+      "Names": [
+        "ReminderTuto_RunFromGuard"
+      ],
+      "Category": "mission"
+    },
+    "3112165732": {
+      "Names": [
+        "ReminderTuto_ThrowDaggers"
+      ],
+      "Category": "mission"
+    },
+    "285248182": {
+      "Names": [
+        "ReminderTuto_WitnessIndicator"
+      ],
+      "Category": "mission"
+    },
+    "707524793": {
+      "Names": [
+        "ReminderWitnessIndicator"
+      ],
+      "Category": "mission"
+    },
+    "1834010952": {
+      "Names": [
+        "RunningAssassins"
+      ],
+      "Category": "mission"
+    },
+    "3558501383": {
+      "Names": [
+        "Scholars Helping Trap 1"
+      ],
+      "Category": "mission"
+    },
+    "3354083771": {
+      "Names": [
+        "Scholars Helping Trap 1 Emir"
+      ],
+      "Category": "mission"
+    },
+    "3354083773": {
+      "Names": [
+        "Scholars Helping Trap 2 Emir"
+      ],
+      "Category": "mission"
+    },
+    "3217499600": {
+      "Names": [
+        "Scholars Helping Trap DamasOutskirts"
+      ],
+      "Category": "mission"
+    },
+    "3457460060": {
+      "Names": [
+        "Scholars_HelpingTrap_FM1"
+      ],
+      "Category": "mission"
+    },
+    "3334294010": {
+      "Names": [
+        "Scholars_HelpingTrap_FM2"
+      ],
+      "Category": "mission"
+    },
+    "3782971761": {
+      "Names": [
+        "Scholars_HelpingTrap_FM4"
+      ],
+      "Category": "mission"
+    },
+    "3789055521": {
+      "Names": [
+        "Scholars_HelpingTrap_FM5"
+      ],
+      "Category": "mission"
+    },
+    "3119386431": {
+      "Names": [
+        "Second_Target"
+      ],
+      "Category": "mission"
+    },
+    "3784371220": {
+      "Names": [
+        "Secret_Ending_Achievement"
+      ],
+      "Category": "mission"
+    },
+    "697802958": {
+      "Names": [
+        "Set_MM_Sinan_Ambiance"
+      ],
+      "Category": "mission"
+    },
+    "2582888175": {
+      "Names": [
+        "ShowCityCam"
+      ],
+      "Category": "mission"
+    },
+    "930370267": {
+      "Names": [
+        "Sibran Popup To Masyaf"
+      ],
+      "Category": "mission"
+    },
+    "1519634206": {
+      "Names": [
+        "Sinan_Breifing_Loop"
+      ],
+      "Category": "mission"
+    },
+    "2757456867": {
+      "Names": [
+        "Skydome FX"
+      ],
+      "Category": "mission"
+    },
+    "1051401290": {
+      "Names": [
+        "Solomon Temple Limitation"
+      ],
+      "Category": "mission"
+    },
+    "464021937": {
+      "Names": [
+        "SpawnOnAnimus"
+      ],
+      "Category": "mission"
+    },
+    "3453309831": {
+      "Names": [
+        "SpawnTheArmy"
+      ],
+      "Category": "mission"
+    },
+    "2444672619": {
+      "Names": [
+        "Special RHP Reminder"
+      ],
+      "Category": "mission"
+    },
+    "1565350252": {
+      "Names": [
+        "StrongAttack_Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "1005212774": {
+      "Names": [
+        "T 18 - Glitch Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "1005212776": {
+      "Names": [
+        "T 20 - Free-step Tutorial Part 2"
+      ],
+      "Category": "mission"
+    },
+    "1005212771": {
+      "Names": [
+        "T15 - Free-step Tutorial Part 1"
+      ],
+      "Category": "mission"
+    },
+    "1005212773": {
+      "Names": [
+        "T17 - Assassination Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "1005212777": {
+      "Names": [
+        "T21 - Walling Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "1045371051": {
+      "Names": [
+        "T28 Quick Inventory Tutorial"
+      ],
+      "Category": "mission"
+    },
+    "1366708164": {
+      "Names": [
+        "TUT_FortressRules"
+      ],
+      "Category": "mission"
+    },
+    "2845651728": {
+      "Names": [
+        "Talal Popup To Masyaf"
+      ],
+      "Category": "mission"
+    },
+    "3918083802": {
+      "Names": [
+        "TalkToStartAdvanceFight"
+      ],
+      "Category": "mission"
+    },
+    "2696337822": {
+      "Names": [
+        "Templar Player Attackers"
+      ],
+      "Category": "mission"
+    },
+    "3273617656": {
+      "Names": [
+        "Tutorial_AssassinHorse"
+      ],
+      "Category": "mission"
+    },
+    "3273617658": {
+      "Names": [
+        "Tutorial_HorseJump"
+      ],
+      "Category": "mission"
+    },
+    "3273617657": {
+      "Names": [
+        "Tutorial_HorseSteer"
+      ],
+      "Category": "mission"
+    },
+    "2927099520": {
+      "Names": [
+        "Unload MB2"
+      ],
+      "Category": "mission"
+    },
+    "2590315485": {
+      "Names": [
+        "Unload MB3"
+      ],
+      "Category": "mission"
+    },
+    "2927099522": {
+      "Names": [
+        "Unload MB4"
+      ],
+      "Category": "mission"
+    },
+    "2927099523": {
+      "Names": [
+        "Unload MB5"
+      ],
+      "Category": "mission"
+    },
+    "2927099526": {
+      "Names": [
+        "Unload MB6"
+      ],
+      "Category": "mission"
+    },
+    "2927099528": {
+      "Names": [
+        "Unload MB7"
+      ],
+      "Category": "mission"
+    },
+    "3119397862": {
+      "Names": [
+        "Unload_FlashBack"
+      ],
+      "Category": "mission"
+    },
+    "714192675": {
+      "Names": [
+        "UnlockDoorToParadise"
+      ],
+      "Category": "mission"
+    },
+    "3080552060": {
+      "Names": [
+        "Victims_Scenes"
+      ],
+      "Category": "mission"
+    },
+    "3272181359": {
+      "Names": [
+        "Vigilantes HelpingTrap_FM5"
+      ],
+      "Category": "mission"
+    },
+    "206972554": {
+      "Names": [
+        "VigilantesHelping_Trap_FM6"
+      ],
+      "Category": "mission"
+    },
+    "3782971146": {
+      "Names": [
+        "Vigilantes_HelpingTrap_FM1"
+      ],
+      "Category": "mission"
+    },
+    "3782971359": {
+      "Names": [
+        "Vigilantes_HelpingTrap_FM2"
+      ],
+      "Category": "mission"
+    },
+    "3782971573": {
+      "Names": [
+        "Vigilantes_HelpingTrap_FM3"
+      ],
+      "Category": "mission"
+    },
+    "3334295550": {
+      "Names": [
+        "Vigilantes_HelpingTrap_FM4"
+      ],
+      "Category": "mission"
+    },
+    "3334295764": {
+      "Names": [
+        "Vigilantes_HelpingTrap_FM5"
+      ],
+      "Category": "mission"
+    },
+    "3334296004": {
+      "Names": [
+        "Vigilantes_HelpingTrap_FM6"
+      ],
+      "Category": "mission"
+    },
+    "3334296356": {
+      "Names": [
+        "Vigilantes_HelpingTrap_FM7"
+      ],
+      "Category": "mission"
+    },
+    "3520121777": {
+      "Names": [
+        "Vigilantes_HelpingTrap_FM8"
+      ],
+      "Category": "mission"
+    },
+    "1727640118": {
+      "Names": [
+        "Vigilantes_HelpingTrap_FM9"
+      ],
+      "Category": "mission"
+    },
+    "3265486034": {
+      "Names": [
+        "Vigilantes_Helping_Trap_FM1"
+      ],
+      "Category": "mission"
+    },
+    "3272180489": {
+      "Names": [
+        "Vigilantes_Helping_Trap_FM2"
+      ],
+      "Category": "mission"
+    },
+    "3272180960": {
+      "Names": [
+        "Vigilantes_Helping_Trap_FM3"
+      ],
+      "Category": "mission"
+    },
+    "3272181201": {
+      "Names": [
+        "Vigilantes_Helping_Trap_FM4"
+      ],
+      "Category": "mission"
+    },
+    "3272181788": {
+      "Names": [
+        "Vigilantes_Helping_Trap_FM7"
+      ],
+      "Category": "mission"
+    },
+    "3272181926": {
+      "Names": [
+        "Vigilantes_Helping_Trap_FM8"
+      ],
+      "Category": "mission"
+    },
+    "930370231": {
+      "Names": [
+        "Vizier Popup To Masyaf"
+      ],
+      "Category": "mission"
+    },
+    "561971875": {
+      "Names": [
+        "War_Camera_Mastershot"
+      ],
+      "Category": "mission"
+    },
+    "1500256392": {
+      "Names": [
+        "White room retry re-init"
+      ],
+      "Category": "mission"
+    },
+    "1102385968": {
+      "Names": [
+        "Wounded Assassin"
+      ],
+      "Category": "mission"
+    },
+    "2547657982": {
+      "Names": [
+        "X-Tra_MM_Scenes"
+      ],
+      "Category": "mission"
+    },
+    "116271445": {
+      "Names": [
+        "kiingdom-damas"
+      ],
+      "Category": "mission"
+    },
+    "116271442": {
+      "Names": [
+        "kingdom-Acre"
+      ],
+      "Category": "mission"
+    },
+    "116271453": {
+      "Names": [
+        "kingdom-arsuf"
+      ],
+      "Category": "mission"
+    },
+    "116271451": {
+      "Names": [
+        "kingdom-jeru"
+      ],
+      "Category": "mission"
+    },
+    "116271452": {
+      "Names": [
+        "kingdom-masyaf"
+      ],
+      "Category": "mission"
+    }
+  }
 }

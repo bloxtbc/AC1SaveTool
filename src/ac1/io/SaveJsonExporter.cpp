@@ -150,6 +150,27 @@ inline void addHash(
 }
 
 
+inline void addClassIDHash(
+    json& object,
+    const char* valueKey,
+    uint32_t classID,
+    const HashDatabase* hashes,
+    bool includeHash = true
+)
+{
+    if (includeHash) {
+        object[valueKey] = classID;
+    }
+
+    if (hashes) {
+        if (const auto* name = hashes->lookupClassName(classID)) {
+            std::string nameKey = std::string(valueKey) + "Hash";
+            object[nameKey] = *name;
+        }
+    }
+}
+
+
 void addObjectRefHash(json& result, const ObjectRefRecord& record,const HashDatabase* hashes) 
 {
     if (!hashes) {
@@ -288,7 +309,7 @@ std::string SaveJsonExporter::exportSave(
         const auto& object = save.objects[i];
         json objectJson;
         objectJson["index"] = i;
-        objectJson["classID"] = object.classID;
+        addClassIDHash(objectJson, "classID", object.classID, hashes);
         objectJson["propertyCount"] = object.propertyCount;
         objectJson["metadataCount"] = object.metadataCount;
         objectJson["unknown2"] = object.unknown2;
