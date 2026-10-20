@@ -29,6 +29,39 @@ PropertyMetadata SaveReader::readMetadata(BinaryReader& reader)
     return metadata;
 }
 
+PropertyValue SaveReader::readValueWrapper(BinaryReader& reader,  const PropertyMetadata& metadata)
+{
+    SerializerFieldType type = metadata.type();
+
+    PropertyValue value{};
+    value.type = type;
+
+    switch (type) {
+        case SerializerFieldType::Array:
+        case SerializerFieldType::ArrayAlt: {
+            const SerializerFieldType elementType = metadata.arrayType();
+            const uint32_t count = reader.u32be();
+
+            value.elementType = elementType;
+
+            ac1::Array elements;
+            elements.reserve(count);
+
+            for (uint32_t i = 0; i < count; ++i) {
+                elements.push_back(readValue(reader, elementType));
+            }
+
+            value.data = std::move(elements);
+            break;
+        }
+        default:
+            value = readValue(reader,type);
+                
+    }
+
+    return value;
+}
+
 PropertyValue SaveReader::readValue(BinaryReader& reader, SerializerFieldType type)
 {
     PropertyValue value{};
@@ -93,13 +126,6 @@ PropertyValue SaveReader::readValue(BinaryReader& reader, SerializerFieldType ty
             );
             break;
         }
-        case SerializerFieldType::Array:
-        case SerializerFieldType::ArrayAlt: {
-            const uint32_t length = reader.u32be();
-            const auto bytes = reader.bytes(length);
-            value.data = std::vector<std::byte>(bytes.begin(), bytes.end());
-            break;
-        }
         default:
             throw std::runtime_error("Unsupported serializer field type: " + std::to_string(static_cast<uint32_t>(type)));
     }
@@ -149,7 +175,7 @@ SaveGameObject SaveReader::readObject(BinaryReader& reader)
     object.unknown2 = reader.u32be();
     object.values.reserve(object.metadataCount);
     for (uint32_t i = 0; i < object.metadataCount; ++i) {
-        object.values.push_back(readValue(reader, object.pm[i].type()));
+        object.values.push_back(readValueWrapper(reader, object.pm[i]));
     }
 
     return object;

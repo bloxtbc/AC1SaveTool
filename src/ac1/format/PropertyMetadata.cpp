@@ -7,4 +7,9 @@ SerializerFieldType PropertyMetadata::type() const
     return static_cast<SerializerFieldType>((identifier >> 16) & 0x3F);
 }
 
+SerializerFieldType PropertyMetadata::arrayType() const
+{
+    return static_cast<SerializerFieldType>((identifier >> 23) & 0x3F);
+}
+
 } // namespace ac1

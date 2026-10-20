@@ -11,6 +11,7 @@ struct PropertyMetadata {
     uint32_t unknown;
 
     SerializerFieldType type() const;
+    SerializerFieldType arrayType() const;
 };
 
 } // namespace ac1

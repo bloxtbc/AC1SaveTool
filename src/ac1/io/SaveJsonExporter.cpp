@@ -66,69 +66,6 @@ json matrix4ToJson(const Matrix4x4& value)
     };
 }
 
-PropertyValueData propertyValueDataForType(SerializerFieldType type, const json& valueJson)
-{
-    switch (type) {
-        case SerializerFieldType::Bool:
-            return valueJson.get<bool>();
-        case SerializerFieldType::UInt8:
-        case SerializerFieldType::Int8Alt1:
-        case SerializerFieldType::Int8Alt2:
-            return valueJson.get<uint8_t>();
-        case SerializerFieldType::UInt16:
-        case SerializerFieldType::Int16:
-            return valueJson.get<uint16_t>();
-        case SerializerFieldType::UInt32:
-        case SerializerFieldType::UInt32Alt:
-        case SerializerFieldType::HashOrId:
-        case SerializerFieldType::UInt32Alt2:
-        case SerializerFieldType::UInt32Alt3:
-            return valueJson.get<uint32_t>();
-        case SerializerFieldType::UInt64:
-            return static_cast<uint64_t>(std::stoull(valueJson.get<std::string>(), nullptr, 0));
-        case SerializerFieldType::Float64:
-            return valueJson.is_string() ? std::stod(valueJson.get<std::string>()) : valueJson.get<double>();
-        case SerializerFieldType::Vector2:
-            return Vector2{ valueJson.at("x").get<float>(), valueJson.at("y").get<float>() };
-        case SerializerFieldType::Vector3:
-            return Vector3{ valueJson.at("x").get<float>(), valueJson.at("y").get<float>(), valueJson.at("z").get<float>() };
-        case SerializerFieldType::Vector4:
-            return Vector4{ valueJson.at("x").get<float>(), valueJson.at("y").get<float>(), valueJson.at("z").get<float>(), valueJson.at("w").get<float>() };
-        case SerializerFieldType::Matrix3x3:
-            return Matrix3x3{ Vector3{ valueJson.at("m01").at("x").get<float>(), valueJson.at("m01").at("y").get<float>(), valueJson.at("m01").at("z").get<float>() }, Vector3{ valueJson.at("m02").at("x").get<float>(), valueJson.at("m02").at("y").get<float>(), valueJson.at("m02").at("z").get<float>() }, Vector3{ valueJson.at("m03").at("x").get<float>(), valueJson.at("m03").at("y").get<float>(), valueJson.at("m03").at("z").get<float>() } };
-        case SerializerFieldType::Matrix4x4:
-            return Matrix4x4{ Vector4{ valueJson.at("m01").at("x").get<float>(), valueJson.at("m01").at("y").get<float>(), valueJson.at("m01").at("z").get<float>(), valueJson.at("m01").at("w").get<float>() }, Vector4{ valueJson.at("m02").at("x").get<float>(), valueJson.at("m02").at("y").get<float>(), valueJson.at("m02").at("z").get<float>(), valueJson.at("m02").at("w").get<float>() }, Vector4{ valueJson.at("m03").at("x").get<float>(), valueJson.at("m03").at("y").get<float>(), valueJson.at("m03").at("z").get<float>(), valueJson.at("m03").at("w").get<float>() }, Vector4{ valueJson.at("m04").at("x").get<float>(), valueJson.at("m04").at("y").get<float>(), valueJson.at("m04").at("z").get<float>(), valueJson.at("m04").at("w").get<float>() } };
-        case SerializerFieldType::String:
-            return valueJson.get<std::string>();
-        case SerializerFieldType::Array:
-        case SerializerFieldType::ArrayAlt:
-        {
-            const std::string hex = valueJson.at("hex").get<std::string>();
-            if (hex.size() % 2 != 0) {
-                throw std::runtime_error("Array hex string has odd length");
-            }
-            std::vector<std::byte> bytes;
-            bytes.reserve(hex.size() / 2);
-            for (std::size_t i = 0; i < hex.size(); i += 2) {
-                const auto hi = std::toupper(static_cast<unsigned char>(hex[i]));
-                const auto lo = std::toupper(static_cast<unsigned char>(hex[i + 1]));
-                const auto digit = [](unsigned char c) -> uint8_t { if (c >= '0' && c <= '9') return c - '0'; if (c >= 'A' && c <= 'F') return c - 'A' + 10; throw std::runtime_error("Invalid hexadecimal digit"); };
-                bytes.push_back(static_cast<std::byte>((digit(hi) << 4) | digit(lo)));
-            }
-            if (valueJson.contains("length")) {
-                const auto expected = valueJson.at("length").get<std::size_t>();
-                if (bytes.size() != expected) {
-                    throw std::runtime_error("Array length mismatch: expected " + std::to_string(expected) + ", got " + std::to_string(bytes.size()));
-                }
-            }
-            return bytes;
-        }
-        default:
-            throw std::runtime_error("Unsupported property value type: " + std::string(serializerFieldTypeNameOrThrow(type)));
-    }
-}
-
-
 inline void addHash(
     json& object,
     const char* valueKey,
@@ -189,76 +126,95 @@ void addObjectRefHash(json& result, const ObjectRefRecord& record,const HashData
     }
 }
 
-json valueToJson(const PropertyValue& value, const ObjectRefRecord* objRefRecord, const HashDatabase* hashes)
+json valueDataToJson(const PropertyValue& value)
 {
-    json result;
-    result["type"] = serializerFieldTypeNameOrThrow(value.type);
-
-    if (objRefRecord) {
-        addObjectRefHash(result, *objRefRecord, hashes);
-    }
-
     switch (value.type) {
         case SerializerFieldType::Bool:
-            result["value"] = std::get<bool>(value.data);
-            break;
+            return std::get<bool>(value.data);
+
         case SerializerFieldType::UInt8:
         case SerializerFieldType::Int8Alt1:
         case SerializerFieldType::Int8Alt2:
-            result["value"] = std::get<uint8_t>(value.data);
-            break;
+            return std::get<uint8_t>(value.data);
+
         case SerializerFieldType::UInt16:
         case SerializerFieldType::Int16:
-            result["value"] = std::get<uint16_t>(value.data);
-            break;
+            return std::get<uint16_t>(value.data);
+
         case SerializerFieldType::UInt32:
         case SerializerFieldType::UInt32Alt:
         case SerializerFieldType::HashOrId:
         case SerializerFieldType::UInt32Alt2:
         case SerializerFieldType::UInt32Alt3:
-            result["value"] = std::get<uint32_t>(value.data);
-            break;
+            return std::get<uint32_t>(value.data);
+
         case SerializerFieldType::UInt64:
-            result["value"] = hex64(std::get<uint64_t>(value.data));
-            break;
+            return hex64(std::get<uint64_t>(value.data));
+
         case SerializerFieldType::Float64:
-            result["value"] = std::get<double>(value.data);
-            break;
+            return std::get<double>(value.data);
+
         case SerializerFieldType::Vector2:
-            result["value"] = vector2ToJson(std::get<Vector2>(value.data));
-            break;
+            return vector2ToJson(std::get<Vector2>(value.data));
+
         case SerializerFieldType::Vector3:
-            result["value"] = vector3ToJson(std::get<Vector3>(value.data));
-            break;
+            return vector3ToJson(std::get<Vector3>(value.data));
+
         case SerializerFieldType::Vector4:
-            result["value"] = vector4ToJson(std::get<Vector4>(value.data));
-            break;
+            return vector4ToJson(std::get<Vector4>(value.data));
+
         case SerializerFieldType::Matrix3x3:
-            result["value"] = matrix3ToJson(std::get<Matrix3x3>(value.data));
-            break;
+            return matrix3ToJson(std::get<Matrix3x3>(value.data));
+
         case SerializerFieldType::Matrix4x4:
-            result["value"] = matrix4ToJson(std::get<Matrix4x4>(value.data));
-            break;
+            return matrix4ToJson(std::get<Matrix4x4>(value.data));
+
         case SerializerFieldType::String:
-            result["value"] = std::get<std::string>(value.data);
-            break;
+            return std::get<std::string>(value.data);
+
+        default:
+            throw std::runtime_error(
+                "Cannot convert value to JSON: " +
+                std::string(serializerFieldTypeNameOrThrow(value.type))
+            );
+    }
+}
+
+json valueToJson(const PropertyValue& value, const ObjectRefRecord* objRefRecord, const HashDatabase* hashes)
+{
+    json result;
+    result["type"] = serializerFieldTypeNameOrThrow(value.type);
+
+    if (objRefRecord)
+        addObjectRefHash(result, *objRefRecord, hashes);
+
+    switch (value.type) {
         case SerializerFieldType::Array:
         case SerializerFieldType::ArrayAlt: {
-            const auto& bytes = std::get<std::vector<std::byte>>(value.data);
-            std::string hex;
-            hex.reserve(bytes.size() * 2);
-            for (std::byte byte : bytes) {
-                const auto value = std::to_integer<unsigned>(byte);
-                char buffer[3];
-                std::snprintf(buffer, sizeof(buffer), "%02X", value);
-                hex += buffer;
+            const auto* elements = std::get_if<ac1::Array>(&value.data);
+
+            if (!elements)
+                throw std::runtime_error("PropertyValue type mismatch: Array");
+
+            if (!value.elementType.has_value())
+                throw std::runtime_error("Array PropertyValue has no element type");
+
+            const auto elementType = *value.elementType;
+
+            result["elementType"] = serializerFieldTypeNameOrThrow(elementType);
+            result["count"] = elements->size();
+
+            json arrayJson = json::array();
+
+            for (const auto& element : *elements) {
+                arrayJson.push_back(valueDataToJson(element));
             }
-            result["length"] = bytes.size();
-            result["hex"] = hex;
+
+            result["value"] = std::move(arrayJson);
             break;
         }
         default:
-            throw std::runtime_error("Cannot export unsupported property value type: " + std::to_string(static_cast<uint32_t>(value.type)));
+            result["value"] = valueDataToJson(value);
     }
 
     return result;

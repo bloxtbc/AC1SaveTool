@@ -10,6 +10,7 @@
 #include <vector>
 
 #include "ac1/format/SerializerFieldType.hpp"
+#include "ac1/io/SaveJsonValue.hpp"
 
 namespace ac1 {
 
@@ -180,15 +181,29 @@ PropertyValue valueFromJson(const json& valueJson)
             break;
         case SerializerFieldType::Array:
         case SerializerFieldType::ArrayAlt: {
-            const std::string hex = valueJson.at("hex").get<std::string>();
-            auto bytes = hexToBytes(hex);
-            if (valueJson.contains("length")) {
-                const std::size_t expected = valueJson.at("length").get<std::size_t>();
-                if (bytes.size() != expected) {
-                    throw std::runtime_error("Array length mismatch: expected " + std::to_string(expected) + ", got " + std::to_string(bytes.size()));
-                }
+            const auto elementType = serializerFieldTypeFromName(valueJson.at("elementType").get<std::string>());
+
+            const auto& arrayJson = valueJson.at("value");
+
+            if (!arrayJson.is_array()) {
+                throw std::runtime_error("Array value must be a JSON array");
             }
-            result.data = std::move(bytes);
+
+            ac1::Array elements;
+            elements.reserve(arrayJson.size());
+
+            for (const auto& elementJson : arrayJson) {
+                PropertyValue element{};
+
+                element.type = elementType;
+                element.data = propertyValueDataForType(elementType, elementJson);
+
+                elements.push_back(std::move(element));
+            }
+
+            result.elementType = elementType;
+            result.data = std::move(elements);
+
             break;
         }
         default:

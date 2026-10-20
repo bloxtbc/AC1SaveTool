@@ -23,6 +23,11 @@ private:
         BinaryReader& reader,
         SerializerFieldType type
     );
+
+    PropertyValue readValueWrapper(
+        BinaryReader& reader,
+        const PropertyMetadata& metadata
+    );
 };
 
 } // namespace ac1

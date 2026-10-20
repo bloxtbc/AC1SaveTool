@@ -170,11 +170,16 @@ void SaveWriter::writeValue(BinaryWriter& writer, const PropertyValue& value)
         }
         case SerializerFieldType::Array:
         case SerializerFieldType::ArrayAlt: {
-            const auto* data = std::get_if<std::vector<std::byte>>(&value.data);
-            if (!data) throw std::runtime_error("PropertyValue type mismatch: Array");
-            writer.u32be(static_cast<uint32_t>(data->size()));
-            if (!data->empty()) {
-                writer.bytes(data->data(), data->size());
+            const auto* elements = std::get_if<ac1::Array>(&value.data);
+
+            if (!elements) {
+                throw std::runtime_error("PropertyValue type mismatch: Array");
+            }
+
+            writer.u32be(static_cast<uint32_t>(elements->size()));
+
+            for (const auto& element : *elements) {
+                writeValue(writer, element);
             }
             break;
         }

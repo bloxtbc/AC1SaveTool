@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 
 project(AC1SaveTool
-    VERSION 0.2.0
+    VERSION 0.3.0
     LANGUAGES CXX
 )
 
@@ -23,6 +23,7 @@ add_library(ac1save_lib
     src/ac1/io/SaveWriter.cpp
     src/ac1/io/SaveJsonExporter.cpp
     src/ac1/io/SaveJsonImporter.cpp
+    src/ac1/io/SaveJsonValue.cpp
 )
 
 target_include_directories(ac1save_lib

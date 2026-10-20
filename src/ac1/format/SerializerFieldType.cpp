@@ -85,4 +85,48 @@ std::string_view serializerFieldTypeNameOrThrow(SerializerFieldType type)
     return name;
 }
 
+size_t serializerTypeSize(SerializerFieldType type)
+{
+    switch (type) {
+        case SerializerFieldType::Bool:
+        case SerializerFieldType::UInt8:
+        case SerializerFieldType::Int8Alt1:
+        case SerializerFieldType::Int8Alt2:
+            return 1;
+
+        case SerializerFieldType::UInt16:
+        case SerializerFieldType::Int16:
+            return 2;
+
+        case SerializerFieldType::UInt32:
+        case SerializerFieldType::UInt32Alt:
+        case SerializerFieldType::HashOrId:
+        case SerializerFieldType::UInt32Alt2:
+        case SerializerFieldType::UInt32Alt3:
+            return 4;
+
+        case SerializerFieldType::UInt64:
+        case SerializerFieldType::Float64:
+            return 8;
+
+        case SerializerFieldType::Vector2:
+            return 8;
+
+        case SerializerFieldType::Vector3:
+            return 12;
+
+        case SerializerFieldType::Vector4:
+            return 16;
+
+        case SerializerFieldType::Matrix3x3:
+            return 36;
+
+        case SerializerFieldType::Matrix4x4:
+            return 64;
+
+        default:
+            return 0; // variable-sized / unsupported as raw element
+    }
+}
+
 } // namespace ac1

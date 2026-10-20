@@ -4,11 +4,16 @@
 #include <string>
 #include <variant>
 #include <vector>
+#include <optional>
 
 #include "ac1/format/SerializerFieldType.hpp"
 #include "ac1/format/Types.hpp"
 
 namespace ac1 {
+
+struct PropertyValue;
+
+using Array = std::vector<PropertyValue>;
 
 using PropertyValueData = std::variant<
     bool,
@@ -27,11 +32,12 @@ using PropertyValueData = std::variant<
     Matrix3x3,
     Matrix4x4,
     std::string,
-    std::vector<std::byte>
+    Array
 >;
 
 struct PropertyValue {
     SerializerFieldType type;
+    std::optional<SerializerFieldType> elementType;
     PropertyValueData data;
 };
 

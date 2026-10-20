@@ -42,5 +42,6 @@ const char* serializerFieldTypeName(SerializerFieldType type);
 SerializerFieldType serializerFieldTypeFromName(std::string_view name);
 
 std::string_view serializerFieldTypeNameOrThrow(SerializerFieldType type);
+size_t serializerTypeSize(SerializerFieldType type);
 
 } 
